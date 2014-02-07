@@ -1,4 +1,11 @@
 {
   "private": true,
-  "name": "ajostrow.me"
+  "name": "ajostrow.me",
+  "dependencies": {
+    "then-redis": "~0.3.10",
+    "when": "~2.8.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  }
 }
