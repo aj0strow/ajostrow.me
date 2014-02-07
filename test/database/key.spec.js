@@ -1,6 +1,6 @@
-var key = require('../../server/database/key');
+var key = req('database/key');
 
-describe('database/key', function () {
+describe('key', function () {
   it('should join on colon', function() {
     assert.equal('slugs:testing-with-mocha', key('slugs', 'testing-with-mocha'));
   });
