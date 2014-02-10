@@ -1,0 +1,1 @@
+Ostrow.CommentsCollection = Backbone.Collection.extend({});

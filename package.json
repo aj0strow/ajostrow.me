@@ -10,7 +10,8 @@
     "express": "~3.4.8",
     "jade": "~1.1.5",
     "stylus": "~0.42.2",
-    "less": "~1.6.3"
+    "less": "~1.6.3",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "mocha": "~1.17.1",

@@ -1,0 +1,1 @@
+Ostrow.ArticlesCollection = Backbone.Collection.extend({});

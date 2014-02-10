@@ -1,90 +1,47 @@
-var db = req('database/db');
+var namespace = req('database/namespace');
 var collection = req('database/collection');
 var when = require('when');
 
-var articles = collection('articles');
+describe('collection', function () {
+  var people = namespace('people').use(collection);
 
-
-describe('articles', function () {
-  after(function () {
-    return db.del('articles');
+  specify('#add', function () {
+    return people.add(+ (new Date), '1').should.be.fulfilled;
   });
 
-  specify('#slugify', function () {
-    var promise = articles.slugify('1', 'hello');
-    return promise.should.be.fulfilled;
-  });
-
-  specify('#save', function () {
-    var promise = articles.save('1', { slug: 'Hello' });
-    return promise.should.be.fulfilled;
-  });
-
-  describe('#find', function () {
+  describe('#remove', function () {
     before(function () {
-      return articles.save('2', { slug: 'cool-title' });
+      return people.add(+ (new Date), '2');
     });
 
-    it('should return article', function () {
-      return articles.find('2').should.become({ slug: 'cool-title' });
-    });
-  });
-
-  describe('#lookup', function () {
-    before(function () {
-      return articles.slugify('2', 'cool-title');
-    });
-
-    it('should return article', function () {
-      return articles.lookup('cool-title').should.become({ slug: 'cool-title' });
+    it('should remove id', function () {
+      return people.remove('2').should.be.fulfilled;
     });
   });
 
-  describe('#persist', function () {
-    var attrs = { id: '3', slug: 'save-me' };
-
+  describe('#count', function () {
     before(function () {
-      return articles.persist('3', 'save-me', attrs);
+      return when.join(flushdb(), people.add(+ (new Date), '3'));
     });
 
-    it('should save article', function () {
-      return articles.find('3').should.become(attrs);
-    });
-
-    it('should slugify article', function () {
-      return articles.lookup('save-me').should.become(attrs);
-    });
-  });
-
-  describe('#create', function () {
-    var attrs = { title: 'New Record', slug: 'new-record' };
-
-    before(function () {
-      return articles.create('new-record', attrs);
-    });
-
-    it('should add new article', function () {
-      return articles.count().should.become(1);
-    });
-
-    it('should slugify article', function () {
-      return articles.lookup('new-record').should.become(attrs);
+    it('should equal 1', function () {
+      return people.count().should.become(1);
     });
   });
 
   describe('#paginate', function () {
-    before (function () {
-      var promises = [ 'first', 'second', 'third' ].map(function (slug) {
-        return articles.create(slug, { slug: slug });
-      });
-      return when.all(articles);
+    before(function () {
+      var promises = [
+        flushdb(),
+        people.add('1', 1.0),
+        people.add('2', 2.0),
+        people.add('3', 3.0)
+      ];
+      return when.all(promises);
     });
 
-    it('should paginate by most recent', function (done) {
-      var promise = articles.paginate(0, 1).then(function (objects) {
-        return objects.map(function (o) { return o.slug });
-      });
-      return promise.should.become([ 'third', 'second' ]);
+    specify('most recent first', function () {
+      return people.paginate(0, 1).should.become([ '3', '2' ]);
     });
   });
 });
