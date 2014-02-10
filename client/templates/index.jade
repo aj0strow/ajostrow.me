@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= title
+    link(rel="stylesheet" href="/assets/layout.css")
+  body
+    .container-fluid
+      .row
+        .col-md-3.text-center
+          .row
+            .col-md-12.me
+              - src = "http://graph.facebook.com/599647268/picture?type=square&height=200&width=200"
+              img(src=src alt="AJ Ostrow").img-circle
+          .row
+            .col-md-12
+              a(href="/about").menu About
+              a(href="/articles").menu Articles
+              a(href="/projects").menu Projects
+        #ostrow.col-md-6
+    .copyright.text-muted &copy; AJ Ostrow, #{ (new Date).getFullYear() }
+    script(src="/assets/boot.js")

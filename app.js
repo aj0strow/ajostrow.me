@@ -1,7 +1,28 @@
-var http = require('http');
+var express = require('express')
+  , mincer = require('mincer')
+  , http = require('http');
 
-var server = http.createServer(function (req, res) {
-  res.end("AJ Ostrow's Blog");
+var app = express();
+
+app.set('views', __dirname + '/client/templates');
+app.set('view engine', 'jade');
+
+// Assets
+
+var environment = new (mincer.Environment);
+
+[ 'bower_components', 'fonts', 'images', 'scripts', 'styles', 'templates' ].forEach(function(folder) {
+  environment.appendPath('client/' + folder);
 });
 
-server.listen(process.env.PORT || 3000);
+app.use('/assets', mincer.createServer(environment));
+
+// Routes
+
+app.get('*', function(req, res) {
+  res.render('index', { title: 'AJ Ostrow' });
+});
+
+app.use(app.routes);
+
+http.createServer(app).listen(process.env.PORT || 8000);

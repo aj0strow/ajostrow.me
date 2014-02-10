@@ -4,7 +4,13 @@
   "dependencies": {
     "then-redis": "~0.3.10",
     "when": "~2.8.0",
-    "bower": "~1.2.8"
+    "bower": "~1.2.8",
+    "marked": "~0.3.1",
+    "mincer": "~0.5.13",
+    "express": "~3.4.8",
+    "jade": "~1.1.5",
+    "stylus": "~0.42.2",
+    "less": "~1.6.3"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
