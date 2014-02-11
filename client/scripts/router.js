@@ -1,11 +1,16 @@
 //= require_tree ./pages
+//= require articles/article.model
 
 Ostrow.Router = Backbone.Router.extend({
+  initialize: function () {
+  },
+
   routes: {
     '': 'redirect',
     'about': 'about',
     'articles': 'articles',
-    'projects': 'projects'
+    'projects': 'projects',
+    'articles/:slug': 'showArticle'
   },
 
   redirect: function () {
@@ -22,6 +27,13 @@ Ostrow.Router = Backbone.Router.extend({
 
   projects: function () {
     this.show(new Ostrow.ProjectsView);
+  },
+  
+  showArticle: function(slug) {
+    var model = new Ostrow.ArticleModel({ slug: slug });
+    model.fetch().done(function () {
+      this.show(new Ostrow.ArticleView({ model: model }));
+    }.bind(this));
   },
 
   show: function (view) {

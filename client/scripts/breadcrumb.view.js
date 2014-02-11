@@ -12,7 +12,8 @@ Ostrow.BreadcrumbView = Backbone.View.extend({
     'click a': 'navigate'
   },
 
-  crumble: function (path) {
+  crumble: function (pathname) {
+    var path = pathname.substring(1);
     this.crumbs.length = 0;
     var parts = [''];
     path.split('/').forEach(function (part) {

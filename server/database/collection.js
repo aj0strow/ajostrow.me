@@ -8,6 +8,10 @@ module.exports = function collection (ns) {
       return db.zcard(ns.key());
     },
 
+    clear: function () {
+      return db.del(ns.key());
+    },
+
     add: function (id, unixtime) {
       return db.zadd(ns.key(), unixtime, id);
     },

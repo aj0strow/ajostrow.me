@@ -11,6 +11,6 @@ _.mixin({
     if (str == null) return '';
     str = String(str).toLowerCase();
     function upcase(c) { return c.toUpperCase(); }
-    return str.replace(/(?:^|\s|-)\S/g, upcase);
+    return str.replace(/(?:^|\s|-)\S/g, upcase).replace(/-/g, ' ');
   }
 });

@@ -1,13 +1,21 @@
 //= require framework
 //= require router
 //= require breadcrumb.view
+//= require articles/recent
+
+$.ajaxSetup({
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  }
+});
 
 $(function () {
   var breadcrumbView = new Ostrow.BreadcrumbView({ el: '#breadcrumb' });
   var router = new Ostrow.Router;
 
-  router.on('route', function (path) {
-    breadcrumbView.trigger('route', path);
+  router.on('route', function () {
+    breadcrumbView.trigger('route', window.location.pathname);
   });
 
   Backbone.history.start({ pushState: true });
@@ -20,7 +28,7 @@ $(function () {
 
   $.getJSON('/articles/recent', function (articles) {
     articles.forEach(function (article) {
-      $('#articles-recent').append(JST['articles/recent'].render(article));
+      $('#recent-articles').append(JST['articles/recent'](article));
     });
   });
 });

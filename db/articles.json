@@ -1,0 +1,698 @@
+[
+  {
+    "title": "Constructor From Any Object",
+    "blurb": "hack to get the actual class from any javascript variable.",
+    "slug": "constructor-from-any-object",
+    "tags": [
+      "javascript"
+    ],
+    "posted": 1370750792565
+  },
+  {
+    "title": "Rails Facebook Auth",
+    "blurb": "how to get OmniAuth, Facebook, Rails 3, Heroku and GoDaddy working together.",
+    "slug": "rails-facebook-auth",
+    "tags": [
+      "ruby-on-rails",
+      "omniauth",
+      "facebook"
+    ],
+    "posted": 1347439302333
+  },
+  {
+    "title": "Rails View Helpers",
+    "blurb": "all steps needed to clean up Rails erb views.",
+    "slug": "rails-view-helpers",
+    "tags": [
+      "ruby-on-rails"
+    ],
+    "posted": 1349931128525
+  },
+  {
+    "title": "Class Project NaturalNumber",
+    "blurb": "implementing basic arithmetic in an arbitrary base in java.",
+    "slug": "class-project-naturalnumber",
+    "tags": [
+      "java",
+      "mcgill"
+    ],
+    "posted": 1349542433435
+  },
+  {
+    "title": "Registering users with email confirmation",
+    "blurb": "Email confirmation is the new standard, so this will go through the simple setup.",
+    "slug": "registering-users-with-email-confirmation",
+    "tags": [
+      "ruby-on-rails",
+      "devise",
+      "sendgrid",
+      "heroku"
+    ],
+    "posted": 1349651027926
+  },
+  {
+    "title": "Sublayouts with Rails",
+    "blurb": "use different sublayouts for controllers to avoid markup duplication.",
+    "slug": "sublayouts-with-rails",
+    "tags": [
+      "ruby-on-rails"
+    ],
+    "posted": 1347409907029
+  },
+  {
+    "title": "Setting up OSX for Development",
+    "blurb": "a guide to installing useful applications and software on a new mac.",
+    "slug": "setting-up-osx-for-development",
+    "tags": [
+      "installing",
+      "osx"
+    ],
+    "posted": 1348763959016
+  },
+  {
+    "title": "jQuery Ajax Upload",
+    "blurb": "a small plugin to make it easy to do asynchronous uploads.",
+    "slug": "jquery-ajax-upload",
+    "tags": [
+      "jquery"
+    ],
+    "posted": 1358302910554
+  },
+  {
+    "title": "Enumerable Fibonacci Numbers",
+    "blurb": "A few lines of code to allow fancy ruby operations on fibonacci numbers.",
+    "slug": "making-fibonacci-numbers-enumerable",
+    "tags": [
+      "ruby"
+    ],
+    "posted": 1362039991001
+  },
+  {
+    "title": "Automatically resizing text areas",
+    "blurb": "How to manually change the textarea height to match its content with jQuery.",
+    "slug": "automatically-resizing-text-areas",
+    "tags": [
+      "jquery",
+      "sass",
+      "coffee-script"
+    ],
+    "posted": 1350809924252
+  },
+  {
+    "title": "Installing MySQL to use with DataMapper",
+    "blurb": "How to install a MySQL database, and set up an application with datamapper and sinatra.",
+    "slug": "installing-mysql-to-use-with-datamapper",
+    "tags": [
+      "osx",
+      "sinatra",
+      "mysql",
+      "datamapper"
+    ],
+    "posted": 1371073060544
+  },
+  {
+    "title": "Rails DRY Page Links",
+    "blurb": "reduce the markup for a list of links with dynamic paths.",
+    "slug": "rails-dry-page-links",
+    "tags": [
+      "ruby-on-rails"
+    ],
+    "posted": 1354420705346
+  },
+  {
+    "title": "Image Input Preview",
+    "blurb": "A middle ground between an unstyled input[type=file] and fancy jQuery plugin.",
+    "slug": "image-input-preview",
+    "tags": [
+      "javascript",
+      "jquery"
+    ],
+    "posted": 1351066571010
+  },
+  {
+    "title": "Ruby Quick Benchmarking",
+    "blurb": "A less verbose way to quickly compare code running times.",
+    "slug": "ruby-quick-benchmarking",
+    "tags": [
+      "ruby"
+    ],
+    "posted": 1351553670115
+  },
+  {
+    "title": "MIPS Fibonacci Numbers",
+    "blurb": "Print out the first 10 Fibonacci numbers generated recursively",
+    "slug": "mips-fibonacci-numbers",
+    "tags": [
+      "mcgill",
+      "mips-assembly"
+    ],
+    "posted": 1353062094077
+  },
+  {
+    "title": "Asynchronous processing with ruby",
+    "blurb": "Trivially speed up blocking processes using threads.",
+    "slug": "asynchronous-processing-with-ruby",
+    "tags": [
+      "ruby",
+      "concurrency"
+    ],
+    "posted": 1364902994040
+  },
+  {
+    "title": "Deploying Assets to S3",
+    "blurb": "how to precompile and serve from Amazon S3 with the Rails asset pipeline",
+    "slug": "deploying-assets-to-s3",
+    "tags": [
+      "ruby-on-rails",
+      "amazon"
+    ],
+    "posted": 1379639952729
+  },
+  {
+    "title": "Organizing Stylesheets For The Asset Pipeline",
+    "blurb": "Using includes instead of direct requires with sprockets to use global mixins",
+    "slug": "organizing-stylesheets-for-the-asset-pipeline",
+    "tags": [
+      "ruby-on-rails",
+      "sass",
+      "asset-pipeline"
+    ],
+    "posted": 1353906495345
+  },
+  {
+    "title": "Divide and Conquer for counting inversions",
+    "blurb": "A quick implementation and benchmark of a divide and conquer algorithm",
+    "slug": "divide-and-conquer-for-counting-inversions",
+    "tags": [
+      "ruby",
+      "algorithm",
+      "mcgill"
+    ],
+    "posted": 1363722506734
+  },
+  {
+    "title": "Trivial Search Suggestions",
+    "blurb": "change dropdown link suggestions when user is searching",
+    "slug": "trivial-search-suggestions",
+    "tags": [
+      "jquery",
+      "html"
+    ],
+    "posted": 1361341659468
+  },
+  {
+    "title": "Regex Cautionary Tale",
+    "blurb": "Advice on choosing character classes for internationalization",
+    "slug": "regex-cautionary-tale",
+    "tags": [
+      "ruby",
+      "regex"
+    ],
+    "posted": 1362744681401
+  },
+  {
+    "title": "Sinatra test helper boilerplate with MiniTest and OmniAuth",
+    "blurb": "Set up your tests to be as concise and painless as possible.",
+    "slug": "sinatra-test-helper-boilerplate-with-minitest-and-omniauth",
+    "tags": [
+      "omniauth",
+      "sinatra",
+      "test"
+    ],
+    "posted": 1371289845673
+  },
+  {
+    "title": "Traditional Email Signup With Omniauth",
+    "blurb": "How to easily test drive email \/ password registration with Sinatra",
+    "slug": "traditional-email-signup-with-omniauth",
+    "tags": [
+      "omniauth",
+      "sinatra"
+    ],
+    "posted": 1372928313092
+  },
+  {
+    "title": "Sinatra Gotchas",
+    "blurb": "Keep running into little idiosyncrasies, so I'll gather them here.",
+    "slug": "sinatra-gotchas",
+    "tags": [
+      "ruby",
+      "sinatra"
+    ],
+    "posted": 1369931166469
+  },
+  {
+    "title": "Dynamic Programming",
+    "blurb": "Ruby module to make memoizing methods painless",
+    "slug": "dynamic-programming",
+    "tags": [
+      "ruby",
+      "memoization"
+    ],
+    "posted": 1365978888772
+  },
+  {
+    "title": "Standard ML Permutation",
+    "blurb": "elegantly generate a list of permutations in 5 LoC.",
+    "slug": "standard-ml-permutation",
+    "tags": [
+      "sml"
+    ],
+    "posted": 1367218540423
+  },
+  {
+    "title": "Organizing Client Templates",
+    "blurb": "a simple way to \"compile\" a bunch of underscore templates.",
+    "slug": "organizing-client-templates",
+    "tags": [
+      "jquery",
+      "underscore"
+    ],
+    "posted": 1367221165855
+  },
+  {
+    "title": "Custom Domain SSL on Heroku",
+    "blurb": "Everything you need to use https on a heroku site.",
+    "slug": "custom-domain-ssl-on-heroku",
+    "tags": [
+      "heroku",
+      "ssl"
+    ],
+    "posted": 1367956280344
+  },
+  {
+    "title": "Client side testing boilerplate",
+    "blurb": "Test javascript apps with Mocha, Chai and Phantom JS",
+    "slug": "client-side-testing-boilerplate",
+    "tags": [
+      "coffee-script",
+      "mocha",
+      "chai",
+      "phantom-js",
+      "backbone",
+      "npm"
+    ],
+    "posted": 1372709590933
+  },
+  {
+    "title": "Fixing Twitter Mentions",
+    "blurb": "how to make the @ symbol show up inside the anchor tag",
+    "slug": "fixing-twitter-mentions",
+    "tags": [
+      "ruby-on-rails",
+      "javascript",
+      "twitter-text-js"
+    ],
+    "posted": 1390455018264
+  },
+  {
+    "title": "Interfacing Between R and Ruby on Heroku",
+    "blurb": "Install both R and a ruby application on Heroku with buildpacks.",
+    "slug": "interfacing-between-r-and-ruby-on-heroku",
+    "tags": [
+      "installing",
+      "heroku",
+      "ruby",
+      "r"
+    ],
+    "posted": 1375047658192
+  },
+  {
+    "title": "Amazon Product Advertising API",
+    "blurb": "Cracking the API appears daunting, but only took an afternoon.",
+    "slug": "amazon-product-advertising-api",
+    "tags": [
+      "ruby",
+      "amazon"
+    ],
+    "posted": 1368892495823
+  },
+  {
+    "title": "TextMate 2 Bundles",
+    "blurb": "Tips and tricks with using the Textmate text editor",
+    "slug": "textmate-2-bundles",
+    "tags": [
+      "osx",
+      "textmate"
+    ],
+    "posted": 1369946993623
+  },
+  {
+    "title": "Installing Postgres on OSX",
+    "blurb": "Installation and bash aliases for your new PostgreSQL database.",
+    "slug": "installing-postgres-on-osx",
+    "tags": [
+      "osx",
+      "postgres"
+    ],
+    "posted": 1378681619281
+  },
+  {
+    "title": "Custom Devise Emails",
+    "blurb": "How to customize all things email when using devise",
+    "slug": "custom-devise-emails",
+    "tags": [
+      "ruby-on-rails",
+      "devise"
+    ],
+    "posted": 1372023951660
+  },
+  {
+    "title": "Working With Money and ActiveRecord",
+    "blurb": "strategies to handle money accurately and generate reports",
+    "slug": "working-with-money-and-activerecord",
+    "tags": [
+      "ruby-on-rails"
+    ],
+    "posted": 1379829719763
+  },
+  {
+    "title": "Prefixed and Nested Backbone Model#toJSON",
+    "blurb": "Patch to allow deeply nested objects and optional prefixing for serialization",
+    "slug": "prefixed-and-nested-backbone-model-tojson",
+    "tags": [
+      "javascript",
+      "underscore",
+      "backbone"
+    ],
+    "posted": 1372834010962
+  },
+  {
+    "title": "Installing leJOS NXJ on OSX",
+    "blurb": "how to install the lego mindstorm sdk on mac with eclipse",
+    "slug": "installing-lejos-nxj-on-osx",
+    "tags": [
+      "osx",
+      "mcgill",
+      "eclipse"
+    ],
+    "posted": 1378951258683
+  },
+  {
+    "title": "Sockets In Sync",
+    "blurb": "if you plan to horizontally scale, pubsub requires a persistence store.",
+    "slug": "sockets-in-sync",
+    "tags": [
+      "coffee-script",
+      "express",
+      "redis",
+      "socket.io"
+    ],
+    "posted": 1391595300440
+  },
+  {
+    "title": "Sinatra API Boilerplate",
+    "blurb": "Using blocks to create minimal, reusable controller actions",
+    "slug": "sinatra-api-boilerplate",
+    "tags": [
+      "sinatra"
+    ],
+    "posted": 1372835858494
+  },
+  {
+    "title": "Callbacks And Promises",
+    "blurb": "how to wrap a function to convert between the nonblocking styles",
+    "slug": "callbacks-and-promises",
+    "tags": [
+      "javascript",
+      "when"
+    ],
+    "posted": 1380139571808
+  },
+  {
+    "title": "Connect Middleware",
+    "blurb": "how to architect modular web apps with express",
+    "slug": "connect-middleware",
+    "tags": [
+      "javascript",
+      "node",
+      "express",
+      "connect"
+    ],
+    "posted": 1381997298498
+  },
+  {
+    "title": "Quickly Run C",
+    "blurb": "little executable script to run a C file",
+    "slug": "quickly-run-c",
+    "tags": [
+      "c",
+      "bash"
+    ],
+    "posted": 1382294778681
+  },
+  {
+    "title": "Installing Python on OSX",
+    "blurb": "How to nicely set up python for web app development.",
+    "slug": "installing-python-on-osx",
+    "tags": [
+      "osx",
+      "python"
+    ],
+    "posted": 1378684185960
+  },
+  {
+    "title": "Getting Started With Django",
+    "blurb": "Installation choices for python development.",
+    "slug": "getting-started-with-django",
+    "tags": [
+      "python",
+      "django"
+    ],
+    "posted": 1378678032725
+  },
+  {
+    "title": "Calculations With Angles",
+    "blurb": "for a school project we're programming robots in java",
+    "slug": "calculations-with-angles",
+    "tags": [
+      "java",
+      "mcgill"
+    ],
+    "posted": 1380053468595
+  },
+  {
+    "title": "Bundler For Github Dependencies",
+    "blurb": "you need to use bundler setup to use github dependencies",
+    "slug": "bundler-for-github-dependencies",
+    "tags": [
+      "ruby",
+      "bundler",
+      "github"
+    ],
+    "posted": 1385685053044
+  },
+  {
+    "title": "CI For Client Packages",
+    "blurb": "how to set up continuous integration for a bower package ",
+    "slug": "ci-for-client-packages",
+    "tags": [
+      "javascript",
+      "npm",
+      "bower",
+      "travis-ci",
+      "grunt"
+    ],
+    "posted": 1386459610920
+  },
+  {
+    "title": "Deploying Node Apps On Azure",
+    "blurb": "install dependencies on an ubuntu vm and run the app with forever",
+    "slug": "deploying-node-apps-on-azure",
+    "tags": [
+      "node",
+      "ubuntu",
+      "capistrano"
+    ],
+    "posted": 1382556398577
+  },
+  {
+    "title": "Navigating A Grid",
+    "blurb": "tools for robot navigation in java",
+    "slug": "navigating-a-grid",
+    "tags": [
+      "java",
+      "mcgill"
+    ],
+    "posted": 1385249039252
+  },
+  {
+    "title": "Custom Flash Partials",
+    "blurb": "how to use Rails 4 custom flash messages to pass a param to view",
+    "slug": "custom-flash-partials",
+    "tags": [
+      "ruby-on-rails"
+    ],
+    "posted": 1379274065787
+  },
+  {
+    "title": "HTML Clickable Section",
+    "blurb": "how to make a whole div clickable",
+    "slug": "html-clickable-section",
+    "tags": [
+      "css",
+      "html"
+    ],
+    "posted": 1379277604426
+  },
+  {
+    "title": "CoffeeScript Node Packages",
+    "blurb": "how to structure, test, and release coffee-script modules",
+    "slug": "coffeescript-node-packages",
+    "tags": [
+      "coffee-script",
+      "npm",
+      "node",
+      "jasmine",
+      "makefile"
+    ],
+    "posted": 1381865585303
+  },
+  {
+    "title": "Using Postgres with Rails",
+    "blurb": "How to get a database up and running for your app on your local machine. ",
+    "slug": "using-postgres-with-rails",
+    "tags": [
+      "ruby-on-rails",
+      "installing",
+      "osx",
+      "postgres"
+    ],
+    "posted": 1349067828559
+  },
+  {
+    "title": "Winston Loggly Transport",
+    "blurb": "how to set up logging to loggly from a node application",
+    "slug": "winston-loggly-transport",
+    "tags": [
+      "node",
+      "winston",
+      "loggly"
+    ],
+    "posted": 1382822788321
+  },
+  {
+    "title": "Installing Redis on OSX",
+    "blurb": "setting up redis to run in the background with nice bash aliases",
+    "slug": "installing-redis-on-osx",
+    "tags": [
+      "osx",
+      "redis"
+    ],
+    "posted": 1383551187904
+  },
+  {
+    "title": "Sequencing Using Lexical Scope",
+    "blurb": "writing a simple sequence helper for factory lady",
+    "slug": "sequencing-using-lexical-scope",
+    "tags": [
+      "coffee-script",
+      "node"
+    ],
+    "posted": 1385523136895
+  },
+  {
+    "title": "Case Sensitive Replacements",
+    "blurb": "case insensitive matches with case sensitive replacements in coffee-script",
+    "slug": "case-sensitive-replacements",
+    "tags": [
+      "regex",
+      "coffee-script"
+    ],
+    "posted": 1386284669254
+  },
+  {
+    "title": "Semantic Backbone Ordering",
+    "blurb": "how to make sure that compound slugs order properly",
+    "slug": "semantic-backbone-ordering",
+    "tags": [
+      "javascript",
+      "backbone"
+    ],
+    "posted": 1386530236170
+  },
+  {
+    "title": "Buttons In Forms",
+    "blurb": "Its very important to set the type of the button in a form",
+    "slug": "buttons-in-forms",
+    "tags": [
+      "html"
+    ],
+    "posted": 1371538007911
+  },
+  {
+    "title": "Rails Yaml Settings",
+    "blurb": "quick monkey-patch for reading in yaml settings files by environment",
+    "slug": "rails-yaml-settings",
+    "tags": [
+      "ruby-on-rails",
+      "yaml"
+    ],
+    "posted": 1388473727818
+  },
+  {
+    "title": "Shadowing Method Calls",
+    "blurb": "avoid recomputing a return value while using the same syntax",
+    "slug": "shadowing-method-calls",
+    "tags": [
+      "ruby"
+    ],
+    "posted": 1389461361774
+  },
+  {
+    "title": "Rails On Beanstalk",
+    "blurb": "start to finish rails deployment on aws elastic beanstalk",
+    "slug": "rails-on-beanstalk",
+    "tags": [
+      "ruby-on-rails",
+      "osx",
+      "aws",
+      "beanstalk",
+      "openssl",
+      "dns"
+    ],
+    "posted": 1389744239881
+  },
+  {
+    "title": "Scoped Enumerable Blocks",
+    "blurb": "small ruby plugin for scoped enumerable blocks",
+    "slug": "scoped-enumerable-blocks",
+    "tags": [
+      "ruby"
+    ],
+    "posted": 1389464628422
+  },
+  {
+    "title": "Twitter Flight Hello World",
+    "blurb": "hello world example for the twitter flight client framework",
+    "slug": "twitter-flight-hello-world",
+    "tags": [
+      "javascript",
+      "flight"
+    ],
+    "posted": 1388874370092
+  },
+  {
+    "title": "RequireJS Hello World",
+    "blurb": "hello world example for client amd and dependency management",
+    "slug": "requirejs-hello-world",
+    "tags": [
+      "javascript",
+      "bower",
+      "requirejs"
+    ],
+    "posted": 1388865569960
+  },
+  {
+    "title": "Pusher Clone",
+    "blurb": "how to write a pusher clone in under 25 lines of code",
+    "slug": "pusher-clone",
+    "tags": [
+      "javascript",
+      "ruby",
+      "faye",
+      "websockets"
+    ],
+    "posted": 1389010615037
+  }
+]
