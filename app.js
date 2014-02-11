@@ -1,7 +1,6 @@
 var express = require('express')
   , mincer = require('mincer')
-  , http = require('http')
-  , RedisStore = require('connect-redis')(express);
+  , http = require('http');
 
 var app = express();
 
