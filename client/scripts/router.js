@@ -1,6 +1,4 @@
-//= require about.view
-//= require articles.view
-//= require projects.view
+//= require_tree ./pages
 
 Ostrow.Router = Backbone.Router.extend({
   routes: {

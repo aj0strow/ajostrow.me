@@ -33,7 +33,7 @@ html(lang="en")
             hr.col-md-9.col-md-offset-1
           .row
             .col-md-12
-              ul.text-left.recent-articles
+              ul#recent-articles.text-left.recent-articles
                 li Article #1
                 li Article #2
                 li Article #3
@@ -42,6 +42,9 @@ html(lang="en")
                 li Article #6
                 li Article #7
                 li Article #8
-        #ostrow.col-md-6
+        .col-md-8.scroll
+          ol#breadcrumb.breadcrumb
+          #ostrow.layout
+          
     .copyright.text-muted &copy; AJ Ostrow, #{ (new Date).getFullYear() }
     script(src="/assets/boot.js")

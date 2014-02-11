@@ -1,6 +1,7 @@
 var express = require('express')
   , mincer = require('mincer')
-  , http = require('http');
+  , http = require('http')
+  , RedisStore = require('connect-redis')(express);
 
 var app = express();
 
@@ -17,6 +18,12 @@ var environment = new (mincer.Environment);
 
 app.use('/assets', mincer.createServer(environment));
 app.use(express.favicon('client/images/favicon.png'));
+
+// Session
+
+var secret = process.env.SECRET || 'secret';
+app.use(express.cookieParser());
+app.use(express.session({ secret: secret }));
 
 // Routes
 
