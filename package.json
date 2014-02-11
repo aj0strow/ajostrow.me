@@ -22,6 +22,7 @@
     "chai-as-promised": "~4.1.0"
   },
   "scripts": {
+    "start": "node ./app.js",
     "test": "./node_modules/mocha/bin/mocha",
     "postinstall": "cd client && ../node_modules/bower/bin/bower install"
   }
