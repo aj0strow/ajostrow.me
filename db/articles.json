@@ -39,7 +39,7 @@
     "posted": 1349542433435
   },
   {
-    "title": "Registering users with email confirmation",
+    "title": "Registering Users With Email Confirmation",
     "blurb": "Email confirmation is the new standard, so this will go through the simple setup.",
     "slug": "registering-users-with-email-confirmation",
     "tags": [
@@ -81,16 +81,16 @@
   {
     "title": "Enumerable Fibonacci Numbers",
     "blurb": "A few lines of code to allow fancy ruby operations on fibonacci numbers.",
-    "slug": "making-fibonacci-numbers-enumerable",
+    "slug": "enumerable-fibonacci-numbers",
     "tags": [
       "ruby"
     ],
     "posted": 1362039991001
   },
   {
-    "title": "Automatically resizing text areas",
+    "title": "Automatically Resizing Text Area",
     "blurb": "How to manually change the textarea height to match its content with jQuery.",
-    "slug": "automatically-resizing-text-areas",
+    "slug": "automatically-resizing-text-area",
     "tags": [
       "jquery",
       "sass",
@@ -99,9 +99,9 @@
     "posted": 1350809924252
   },
   {
-    "title": "Installing MySQL to use with DataMapper",
+    "title": "Installing MySQL For DataMapper",
     "blurb": "How to install a MySQL database, and set up an application with datamapper and sinatra.",
-    "slug": "installing-mysql-to-use-with-datamapper",
+    "slug": "installing-mysql-for-datamapper",
     "tags": [
       "osx",
       "sinatra",
@@ -149,9 +149,9 @@
     "posted": 1353062094077
   },
   {
-    "title": "Asynchronous processing with ruby",
+    "title": "Ruby Async",
     "blurb": "Trivially speed up blocking processes using threads.",
-    "slug": "asynchronous-processing-with-ruby",
+    "slug": "ruby-async",
     "tags": [
       "ruby",
       "concurrency"
@@ -180,9 +180,9 @@
     "posted": 1353906495345
   },
   {
-    "title": "Divide and Conquer for counting inversions",
+    "title": "Counting Inversions",
     "blurb": "A quick implementation and benchmark of a divide and conquer algorithm",
-    "slug": "divide-and-conquer-for-counting-inversions",
+    "slug": "counting-inversions",
     "tags": [
       "ruby",
       "algorithm",
@@ -211,9 +211,9 @@
     "posted": 1362744681401
   },
   {
-    "title": "Sinatra test helper boilerplate with MiniTest and OmniAuth",
-    "blurb": "Set up your tests to be as concise and painless as possible.",
-    "slug": "sinatra-test-helper-boilerplate-with-minitest-and-omniauth",
+    "title": "Sinatra Test Boilerplate",
+    "blurb": "set up your tests to be concise with MiniTest and OmniAuth",
+    "slug": "sinatra-test-boilerplate",
     "tags": [
       "omniauth",
       "sinatra",
@@ -281,9 +281,9 @@
     "posted": 1367956280344
   },
   {
-    "title": "Client side testing boilerplate",
+    "title": "Client Side Testing",
     "blurb": "Test javascript apps with Mocha, Chai and Phantom JS",
-    "slug": "client-side-testing-boilerplate",
+    "slug": "client-side-testing",
     "tags": [
       "coffee-script",
       "mocha",
@@ -367,9 +367,9 @@
     "posted": 1379829719763
   },
   {
-    "title": "Prefixed and Nested Backbone Model#toJSON",
+    "title": "Prefixed and Nested Backbone JSON",
     "blurb": "Patch to allow deeply nested objects and optional prefixing for serialization",
-    "slug": "prefixed-and-nested-backbone-model-tojson",
+    "slug": "prefixed-and-nested-backbone-json",
     "tags": [
       "javascript",
       "underscore",
@@ -442,26 +442,6 @@
     "posted": 1382294778681
   },
   {
-    "title": "Installing Python on OSX",
-    "blurb": "How to nicely set up python for web app development.",
-    "slug": "installing-python-on-osx",
-    "tags": [
-      "osx",
-      "python"
-    ],
-    "posted": 1378684185960
-  },
-  {
-    "title": "Getting Started With Django",
-    "blurb": "Installation choices for python development.",
-    "slug": "getting-started-with-django",
-    "tags": [
-      "python",
-      "django"
-    ],
-    "posted": 1378678032725
-  },
-  {
     "title": "Calculations With Angles",
     "blurb": "for a school project we're programming robots in java",
     "slug": "calculations-with-angles",
@@ -496,9 +476,9 @@
     "posted": 1386459610920
   },
   {
-    "title": "Deploying Node Apps On Azure",
+    "title": "Deploying Node On Azure",
     "blurb": "install dependencies on an ubuntu vm and run the app with forever",
-    "slug": "deploying-node-apps-on-azure",
+    "slug": "deploying-node-on-azure",
     "tags": [
       "node",
       "ubuntu",

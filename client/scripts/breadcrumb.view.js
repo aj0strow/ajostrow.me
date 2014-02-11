@@ -8,8 +8,7 @@ Ostrow.BreadcrumbView = Backbone.View.extend({
   },
 
   events: {
-    'route': 'crumble',
-    'click a': 'navigate'
+    'route': 'crumble'
   },
 
   crumble: function (pathname) {
@@ -28,11 +27,5 @@ Ostrow.BreadcrumbView = Backbone.View.extend({
 
   templateData: function () {
     return { crumbs: this.crumbs };
-  },
-
-  navigate: function (ev) {
-    ev.preventDefault();
-    var path = $(ev.target).attr('href');
-    Backbone.history.navigate(path, true);
   }
 });

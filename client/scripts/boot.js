@@ -3,14 +3,22 @@
 //= require breadcrumb.view
 //= require articles/recent
 
-$.ajaxSetup({
-  headers: {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-  }
-});
-
 $(function () {
+  $(document).on('click', 'a', function (ev) {
+    ev.preventDefault();
+    var $a = $(this);
+    if ($a.attr('href')[0] == '/') {
+
+      // internal link
+      Backbone.history.navigate($a.attr('href'), true);
+    } else {
+
+      // external link
+      $a.attr('target', '_blank');
+      window.open($a.attr('href'));
+    }
+  });
+
   var breadcrumbView = new Ostrow.BreadcrumbView({ el: '#breadcrumb' });
   var router = new Ostrow.Router;
 
@@ -24,11 +32,5 @@ $(function () {
     ev.preventDefault();
     var path = $(ev.target).attr('href');
     Backbone.history.navigate(path, true);
-  });
-
-  $.getJSON('/articles/recent', function (articles) {
-    articles.forEach(function (article) {
-      $('#recent-articles').append(JST['articles/recent'](article));
-    });
   });
 });

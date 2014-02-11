@@ -9,10 +9,13 @@
 @import "bootstrap/less/type";
 @import "bootstrap/less/grid";
 @import "bootstrap/less/breadcrumbs";
+@import "bootstrap/less/pager";
 
 .layout {
   padding-top: 30px;
   padding-left: 2px;
+  padding-bottom: 100px;
+  overflow: hidden;
 }
 
 .breadcrumb {
@@ -55,17 +58,23 @@
   margin-bottom: 10px;
 }
 
-.article {
-  padding-bottom: 100px;
+.article {  
+  pre {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: #f6f6f6;
+    padding: 5px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h3 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
-
-.article pre {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background: #f6f6f6;
-  padding: 5px;
-}
-
 
 .copyright {
   position: fixed;
@@ -73,4 +82,18 @@
   padding-bottom: 2px;
   left: 0;
   bottom: 0;
+}
+
+.writing {
+  font-size: 1.1em;
+  padding-right: 10px;
+  
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.articles {
+  overflow: hidden;
+  padding-bottom: 20px;
 }

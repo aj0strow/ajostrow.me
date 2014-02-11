@@ -3,6 +3,7 @@ var auth = require('../auth');
 var fs = require('fs');
 var marked = require('marked');
 var highlightjs = require('highlight.js');
+var cache = require('../cache');
 
 marked.setOptions({
   highlight: function(code) {
@@ -13,11 +14,8 @@ marked.setOptions({
 module.exports = function (app) {
 
   app.get('/articles', function (req, res) {
-    res.promise(articles.paginate(0, 100));
-  });
-
-  app.get('/articles/recent', function (req, res) {
-    res.promise(articles.recent(8));
+    var index = (req.param('page') || 0) * 30;
+    res.promise(articles.paginate(index, index + 29).then(articles.fetch));
   });
   
   function markdown (req, res, next) {
@@ -35,7 +33,7 @@ module.exports = function (app) {
     });
   }
 
-  app.get('/articles/:slug', markdown, markup, function (req, res) {
+  app.get('/articles/:slug', cache('hour'), markdown, markup, function (req, res) {
     var promise = articles.lookup(req.params.slug).then(function (json) {
       json.markup = req.markup;
       return json;

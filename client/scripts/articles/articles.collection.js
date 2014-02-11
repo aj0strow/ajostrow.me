@@ -1,4 +1,6 @@
+//= require articles/article.model
+
 Ostrow.ArticlesCollection = Backbone.Collection.extend({
-  url: '/articles/recent',
-  idAttribute: 'slug'
+  url: '/articles',
+  model: Ostrow.ArticleModel
 });
