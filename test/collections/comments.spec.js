@@ -1,1 +1,0 @@
-var comments = req('collections/comments');
