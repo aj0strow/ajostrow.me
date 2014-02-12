@@ -1,6 +1,7 @@
 var articles = require('../collections/articles');
-var auth = require('../auth');
 var cache = require('../cache');
+var markdown = require('./markdown');
+var markup = require('./markup');
 
 module.exports = function (app) {
 
@@ -8,9 +9,6 @@ module.exports = function (app) {
     var index = (req.param('page') || 0) * 30;
     res.promise(articles.paginate(index, index + 29).then(articles.fetch));
   });
-  
-  var markdown = require('./markdown');
-  var markup = require('./markup');
 
   app.get('/articles/:slug', cache('hour'), markdown('articles'), markup, function (req, res) {
     var promise = articles.lookup(req.params.slug).then(function (json) {

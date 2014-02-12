@@ -1,11 +1,14 @@
-var articles = require('../server/collections/articles');
-var data = require('./articles.json');
+function lazy (namespace) {
+  var collection = require('../server/collections/' + namespace);
+  var data = require('./' + namespace + '.json');
 
-function lazy() {
-  if (data.length == 0) return;
-  
-  articles.persist(data.pop());
-  setTimeout(lazy, 1);
-};
+  function step() {
+    if (data.length == 0) return;
+    collection.persist(data.pop());
+    setTimeout(step, 1);
+  }
 
-articles.clear().then(lazy);
+  collection.clear().then(step);
+}
+
+lazy('articles');
