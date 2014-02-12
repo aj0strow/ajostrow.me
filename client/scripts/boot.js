@@ -6,16 +6,11 @@
 $(function () {
   $(document).on('click', 'a', function (ev) {
     ev.preventDefault();
-    var $a = $(this);
-    if ($a.attr('href')[0] == '/') {
-
-      // internal link
-      Backbone.history.navigate($a.attr('href'), true);
+    if (this.host == window.location.host) {
+      Backbone.history.navigate(this.pathname, true);
     } else {
-
-      // external link
-      $a.attr('target', '_blank');
-      window.open($a.attr('href'));
+      this.target = '_blank';
+      window.open(this.href);
     }
   });
 

@@ -674,5 +674,15 @@
       "websockets"
     ],
     "posted": 1389010615037
+  },
+  {
+    "title": "Catching Clicks",
+    "blurb": "an introduction to event delegation and the anchor element",
+    "slug": "catching-clicks",
+    "tags": [
+      "javascript",
+      "jquery"
+    ],
+    "posted": 1392190342001
   }
 ]
