@@ -9,12 +9,16 @@ app.set('view engine', 'jade');
 
 // Assets
 
+var cache = require('./server/cache');
 var environment = new (mincer.Environment);
 
 [ 'bower_components', 'fonts', 'images', 'scripts', 'styles', 'templates' ].forEach(function(folder) {
   environment.appendPath('client/' + folder);
 });
 
+app.configure('production', function () {
+  app.use('/assets', cache('hours', 3));
+});
 app.use('/assets', mincer.createServer(environment));
 app.use(express.favicon('client/images/favicon.png'));
 
