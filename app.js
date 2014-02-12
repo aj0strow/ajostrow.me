@@ -1,3 +1,5 @@
+require('newrelic');
+
 var express = require('express')
   , mincer = require('mincer')
   , http = require('http');
