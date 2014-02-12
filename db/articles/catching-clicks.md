@@ -1,4 +1,4 @@
-When developing singe page apps, anchor clicks should not behave by navigating to a new path.  
+In single page apps, clicking links should not navigate the user away from the current page. All anchor clicks should be caught and dealt with accordingly. 
 
 ### Event Delegation
 
@@ -10,21 +10,21 @@ Imagine you want to watch the fields in a form to save to the server when they c
 $('#form input').blur(handler);
 ```
 
-The above code finds every child input of the form, and interates through binding the hander to each input's blur event. Anytime you type a space in a jQuery selector, you probably screwed up. 
+The above code finds every child input of the form, and interates through binding the hander to each input's blur event. A good rule of thumb is to avoid spaces in jQuery selectors. 
 
-First off, finding and iterating is fast but still takes *some* time. More importantly for single page apps, if new fields are dynamically added to the form, they will not work because they didn't exist when event bindings were being passed out. 
+Finding and iterating is fast but still takes *some* time. More importantly for single page apps, if new fields are dynamically added to the form, they will not work like the other inputs because they werent in the DOM when the event bindings were passed out. 
 
-Instead, we'll use event delegation, binding the blur event to the parent form. 
+A better solution is to use event delegation, binding the blur event to the parent form. 
 
 ```javascript
 $('#form').on('blur', 'input', handler);
 ```
 
-Delegation means that the context or `this` in the handler function body will refer to the node that triggered the event. In other words the two statements are syntactically interchangable. 
+Delegation means that the context (aka `this`) in the handler function body refers to the node that triggered the event, even though the event is bound on the parent. 
 
 ### Catching Clicks
 
-As the title promised, here's how to catch every click. I chose to trigger the path with the backbone router, and open all external links in a new tab.
+As the title promised, here's how to catch every click. It triggers backbone routes for local links, and open all external links in a new tab.
 
 ```javascript
 $(document).on('click', 'a', function (ev) {
