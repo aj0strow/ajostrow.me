@@ -1,4 +1,4 @@
 Ostrow.ArticleModel = Backbone.Model.extend({
-  urlRoot: '/articles',
+  urlRoot: '/api/articles',
   idAttribute: 'slug'
 });
