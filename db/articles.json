@@ -684,5 +684,24 @@
       "jquery"
     ],
     "posted": 1392190342001
+  },
+  {
+    "title": "Custom Grape Validators",
+    "blurb": "how to write custom parameter validators for grape endpoints",
+    "slug": "custom-grape-validators",
+    "tags": [
+      "ruby",
+      "grape"
+    ],
+    "posted": 1394481805294
+  },
+  {
+    "title": "Javascript Fun Facts",
+    "blurb": "did ya know that in javascript ...",
+    "slug": "javascript-fun-facts",
+    "tags": [
+      "javascript"
+    ],
+    "posted": 1394572853343
   }
 ]
