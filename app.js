@@ -38,11 +38,17 @@ app.use(function (req, res, next) {
 // Routes
 
 app.use(function (req, res, next) {
-  if (req.accepted[0].subtype === 'html') {
-    res.render('index', { title: 'AJ Ostrow' });
-  } else {
-    next();
-  }
+  var regex = /^\/thoughts/;
+  return regex.test(req.path) 
+    ? res.redirect(req.path.replace(regex, '/articles'))
+    : next();
+});
+
+app.use(function (req, res, next) {
+  var accept = req.accepted[0].subtype;
+  return accept === 'html'
+    ? res.render('index', { title: 'AJ Ostrow' })
+    : next();
 });
 
 require('./server/routes')(app);
