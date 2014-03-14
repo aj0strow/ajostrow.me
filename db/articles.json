@@ -703,5 +703,14 @@
       "javascript"
     ],
     "posted": 1394572853343
+  },
+  {
+    "title": "Dynamic Properties",
+    "blurb": "defining getters and setters on javascript objects",
+    "slug": "dynamic-properties",
+    "tags": [
+      "javascript"
+    ],
+    "posted": 1394815637328
   }
 ]
