@@ -98,7 +98,7 @@ What this does is check it content has been passed for :application. If there is
 <% content_for :application do %>
   <!-- Fancy images and stuff -->
 
-  <div id="content>
+  <div id="content">
     <%= content_for?(:halloween) ? yield(:halloween) : yield %>
   </div>
 <% end %>
