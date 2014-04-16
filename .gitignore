@@ -9,3 +9,6 @@ bower_components
 
 # New Relic
 *.log
+
+# Redis
+dump.rdb

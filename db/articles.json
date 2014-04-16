@@ -358,9 +358,9 @@
     "posted": 1372023951660
   },
   {
-    "title": "Working With Money and ActiveRecord",
+    "title": "Working With Money in ActiveRecord",
     "blurb": "strategies to handle money accurately and generate reports",
-    "slug": "working-with-money-and-activerecord",
+    "slug": "working-with-money-in-activerecord",
     "tags": [
       "ruby-on-rails"
     ],
@@ -712,5 +712,16 @@
       "javascript"
     ],
     "posted": 1394815637328
+  },
+  {
+    "title": "Apple Push Notifications",
+    "blurb": "guide to configure and send development push notifications",
+    "slug": "apple-push-notifications",
+    "tags": [
+      "objective-c",
+      "ruby",
+      "openssl"
+    ],
+    "posted": 1397689903968
   }
 ]
