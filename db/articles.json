@@ -723,5 +723,14 @@
       "openssl"
     ],
     "posted": 1397689903968
+  },
+  {
+    "title": "S3 Static Hosting",
+    "blurb": "quickly deploy static websites and redirect short urls",
+    "slug": "s3-static-hosting",
+    "tags": [
+      "amazon"
+    ],
+    "posted": 1399399593462
   }
 ]
