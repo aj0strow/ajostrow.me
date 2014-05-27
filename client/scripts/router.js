@@ -5,7 +5,11 @@
 Ostrow.Router = Backbone.Router.extend({
   initialize: function () {
     this.pages = [];
-    new Ostrow.ArticlesRecentView({ el: '#recent-articles', collection: this.page(0) });
+    new Ostrow.ArticlesRecentView({
+      el: '#recent-articles',
+      collection: this.page(0)
+    });
+    this.on()
   },
 
   routes: {
@@ -31,6 +35,8 @@ Ostrow.Router = Backbone.Router.extend({
   projects: function () {
     this.show(new Ostrow.ProjectsView);
   },
+
+  // private
 
   many: function (index) {
     this.show(new Ostrow.ArticlesView({ collection: this.page(index), page: index }));
@@ -58,6 +64,5 @@ Ostrow.Router = Backbone.Router.extend({
     }
     return articles;
   }
-    
-  
+
 });

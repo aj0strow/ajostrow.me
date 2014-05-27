@@ -101,7 +101,7 @@ One option for reading potential user ids from the set is to grab them all, but 
 SSCAN locations:montreal 0 COUNT 100
 ```
 
-The return value includes the next value to pass to the cursor and returned values. Ror example 133 could be the next cursor. Then you'd call SSCAN again with 133 instead of 0 to get the next 100 values. Note: The count and the next cursor value are unrelated. If the next cursor is 0, then it's the end of the iteration. 
+The return value includes the next value to pass to the cursor, and returned set members. For example "133" could be the next cursor. Then you'd call SSCAN again with 133 instead of 0 to fetch the next 100 set members. Careful: the count and the next cursor value are unrelated. If the next cursor is "0" it's the end of the iteration. 
 
 ### Queue
 
@@ -123,7 +123,7 @@ After fetching 100 user ids, each one needs to be looked up and checked for a ma
 RPUSH users:aj0strow:queue '{ json user }'
 ```
 
-After a few cursors, it's probably safe to start serving profiles to the user, the queue can continue to be built in the background. Time for swiping left or right. 
+After a few cursors, it's probably safe to start serving profiles to the user.  The queue is continued in the background. Time for swiping left or right. 
 
 ### Skips
 
@@ -153,7 +153,7 @@ Each time Julia changes her profile, we set the ttl (time to live) for her skips
 EXPIRE users:julia-lang:skips 86400
 ``` 
 
-When filtering user ids, we needa check to make sure I haven't already skipped the user. See [SISMEMBER](http://redis.io/commands/sismember). 
+When filtering users for the queue, we needa check to make sure I haven't already skipped the user. See [SISMEMBER](http://redis.io/commands/sismember). 
 
 ```
 SISMEMBER users:julia-lang:skips aj0strow
@@ -201,13 +201,13 @@ ZREVRANGE users:aj0strow:matches 0 -1
 
 ### Messages
 
-We work up the courage to break the ice, and it's time to store messages. They belong to two users, so the key must be a combination of our two ids (how romantic, nu?). 
+We work up the courage to break the ice, and it's time to store messages. The messages belong to both users, so the key must be a combination of our two ids (how romantic, nu?)
 
 ```
 messages:$hashcode
 ```
 
-Our simple hashing will be to combine the ids in alphabetic order with a hash symbol. Facebook ids couldn't have a hash symbol in urls, so it should be safe. 
+Our simple hashing function will combine the ids in alphabetic order with a hash symbol. Facebook ids couldn't have a hash symbol due to urls, so it should be safe. 
 
 To add messages, see the [LPUSH](http://redis.io/commands/lpush) command to prepend messages.
 
@@ -215,7 +215,7 @@ To add messages, see the [LPUSH](http://redis.io/commands/lpush) command to prep
 LPUSH messages:aj0strow#julia-lang '{ json message }'
 ```
 
-It's unlikely for users to message thousands of times before exchanging snapchat contacts, so we can pull all the messages from the conversation. See [LRANGE](http://redis.io/commands/lrange). 
+It's unlikely users will message back and forth thousands of times before exchanging snapchat contacts, so we can safely pull all messages at once from the conversation. See [LRANGE](http://redis.io/commands/lrange). 
 
 ```
 LRANGE messages:aj0strow#julia-lang 0 -1
@@ -223,30 +223,28 @@ LRANGE messages:aj0strow#julia-lang 0 -1
 
 ### Real-Time
 
-Tinder wouldn't be much fun without the real-time aspect of notifications, matches, and messages. It's important to reject subscriptions to channels the user should not have access to. 
+Tinder wouldn't be much fun without the real-time aspect of matches and messages. We can accomplish real-time events with Redis pub-sub. See [SUBSCRIBE](http://redis.io/commands/subscribe). 
 
 ```
 SUBSCRIBE aj0strow
 ```
 
-Each time a match or message is created, we broadcast the event to each client listening. See [PUBLISH](http://redis.io/commands/publish). 
+Each time a match or message is created, we broadcast the event to each relevate client channel. See [PUBLISH](http://redis.io/commands/publish). 
 
 ```
 MULTI
-PUBLISH aj0strow '{ json notification }'
-PUBLISH julia-lang '{ json notification }'
+PUBLISH aj0strow '{ json event }'
+PUBLISH julia-lang '{ json event }'
 EXEC
 ```
 
-At the end of the session, clean up the connections.
+At the end of the session, clean up the connections. See [UNSUBSCRIBE](http://redis.io/commands/unsubscribe). 
 
 ```
 UNSUBSCRIBE aj0strow
 ```
 
 ### Final Schema
-
-Again, schema isn't exactly the right word, but regardless:
 
 ```
 KEYS
@@ -268,7 +266,7 @@ Likely simpler than whatever Tinder actually uses.
 
 ### Further Learning
 
-We just touched on a few simple redis operations. It can do a *lot* of interesting things. 
+We touched on many redis operations, but it can do a *lot* of interesting things. 
 
 * Check out [SINTER](http://redis.io/commands/sinter) for common friends and interests.
 

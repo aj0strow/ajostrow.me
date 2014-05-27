@@ -4,6 +4,8 @@
 Ostrow.ArticlesView = Backbone.View.extend({
   template: 'pages/articles',
 
+  title: 'AJ Ostrow ~ Articles',
+
   initialize: function (options) {
     this.page = options.page;
     this.listenTo(this.collection, 'add', this.append);
