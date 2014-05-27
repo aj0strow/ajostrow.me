@@ -732,5 +732,14 @@
       "amazon"
     ],
     "posted": 1399399593462
+  },
+  {
+    "title": "Redis Swipe Right",
+    "blurb": "introduction to Redis building Tinder functionality",
+    "slug": "redis-swipe-right",
+    "tags": [
+      "redis"
+    ],
+    "posted": 1401151892711
   }
 ]
