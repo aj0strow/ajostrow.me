@@ -73,7 +73,7 @@ Add a user to the database as well.
 
 ```
 $ curl -X POST -d '{ "name": "user", "password": "long pass" }' \
-  'http://localhost:8086/db/db_name_here/users?u=root&p=root
+  'http://localhost:8086/db/db_name_here/users?u=root&p=root'
 ```
 
 You can now connect to the ip address and port with a client library, and read and write data. You can't do administrative tasks tho, because the user only has access to the one database. 
