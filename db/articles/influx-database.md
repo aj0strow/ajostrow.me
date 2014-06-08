@@ -34,11 +34,11 @@ var points = [
   { time: new Date(), x: 8, y: 22 }
 ]
 
-influxdb.writePoints('unique-id-here', points, {}, function (e, response) {
+client.writePoints('unique-id-here', points, {}, function (e, response) {
   if (e) throw e
 
   var query = 'select * from unique-id-here'
-  influxdb.query(query, function (e, response) {
+  client.query(query, function (e, response) {
     if (e) throw e
     console.log(response)
   })
