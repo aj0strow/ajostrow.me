@@ -741,5 +741,17 @@
       "redis"
     ],
     "posted": 1401151892711
+  },
+  {
+    "title": "Influx Database",
+    "blurb": "getting started with influx db and deploying",
+    "slug": "influx-database",
+    "tags": [
+      "influxdb",
+      "curl",
+      "ubuntu",
+      "node"
+    ],
+    "posted": 1402267476512
   }
 ]
