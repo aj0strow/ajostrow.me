@@ -425,7 +425,7 @@
     "slug": "connect-middleware",
     "tags": [
       "javascript",
-      "node",
+      "nodejs",
       "express",
       "connect"
     ],
@@ -480,7 +480,7 @@
     "blurb": "install dependencies on an ubuntu vm and run the app with forever",
     "slug": "deploying-node-on-azure",
     "tags": [
-      "node",
+      "nodejs",
       "ubuntu",
       "capistrano"
     ],
@@ -522,7 +522,7 @@
     "tags": [
       "coffee-script",
       "npm",
-      "node",
+      "nodejs",
       "jasmine",
       "makefile"
     ],
@@ -545,7 +545,7 @@
     "blurb": "how to set up logging to loggly from a node application",
     "slug": "winston-loggly-transport",
     "tags": [
-      "node",
+      "nodejs",
       "winston",
       "loggly"
     ],
@@ -567,7 +567,7 @@
     "slug": "sequencing-using-lexical-scope",
     "tags": [
       "coffee-script",
-      "node"
+      "nodejs"
     ],
     "posted": 1385523136895
   },
@@ -750,8 +750,19 @@
       "influxdb",
       "curl",
       "ubuntu",
-      "node"
+      "nodejs"
     ],
     "posted": 1402267476512
+  },
+  {
+    "title": "Digital Ocean Basics",
+    "blurb": "managing and deploying droplets using the tugboat cli",
+    "slug": "digital-ocean-basics",
+    "tags": [
+      "digital-ocean",
+      "ubuntu",
+      "nodejs"
+    ],
+    "posted": 1402551746231
   }
 ]
