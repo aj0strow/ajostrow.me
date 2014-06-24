@@ -764,5 +764,15 @@
       "nodejs"
     ],
     "posted": 1402551746231
+  },
+  {
+    "title": "Crushing Images",
+    "blurb": "optimizing jpeg files with Go streams",
+    "slug": "crushing-images",
+    "tags": [
+      "go",
+      "jpeg"
+    ],
+    "posted": 1403569309896
   }
 ]
