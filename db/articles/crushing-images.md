@@ -193,6 +193,6 @@ image@10.jpg: 4166906 --> 279443 (93.29%) ~ 0.39s
 
 ### Server Caveat
 
-The http.Request.Body and http.ResponseWriter can be used as a reader and writer respectively. I thought it would be possible to implement a streaming echo compression server, but unfortunately it's not possible to read from the request and write to the response at the [same damn time](https://youtube.com/watch?v=alwiefjlaiwefj). 
+The http.Request.Body and http.ResponseWriter can be used as a reader and writer respectively. I thought it would be possible to implement a streaming echo compression server, but unfortunately it's not possible to read from the request and write to the response at the [same damn time](https://www.youtube.com/watch?v=e0Y39QnwRvY). 
 
 The next challenge is to find out if the command can act as a duplex stream to compress a request body and write it to the cloud without ever saving the image to disk. Tweet if you figure it out [@aj0strow](https://twitter.com/aj0strow). 
