@@ -24,5 +24,5 @@ $ NODE_ENV=test mocha
 article posted time
 
 ```
-$ node -p '+new Date'
+$ node -p '+new Date' | pbcopy
 ```

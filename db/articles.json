@@ -774,5 +774,17 @@
       "jpeg"
     ],
     "posted": 1403569309896
+  },
+  {
+    "title": "Grape On Rails",
+    "blurb": "in-depth tutorial on mounting a grape api",
+    "slug": "grape-on-rails",
+    "tags": [
+      "ruby",
+      "grape",
+      "rails",
+      "rspec"
+    ],
+    "posted": 1403619368514
   }
 ]
