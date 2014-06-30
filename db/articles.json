@@ -786,5 +786,16 @@
       "rspec"
     ],
     "posted": 1403619368514
+  },
+  {
+    "title": "Markdown Editor",
+    "blurb": "real-time markdown editor in 30 lines of code",
+    "slug": "markdown-editor",
+    "tags": [
+      "angular",
+      "javascript",
+      "markdown"
+    ],
+    "posted": 1404125631582
   }
 ]
