@@ -1,63 +1,71 @@
-if (process.env.NODE_ENV == 'production') {
-  require('newrelic');
+var env = process.env.NODE_ENV
+
+if (env == 'production') {
+  require('newrelic')
 }
 
 var express = require('express')
-  , mincer = require('mincer')
-  , http = require('http');
+var http = require('http')
 
-var app = express();
+var app = express()
 
-app.set('views', __dirname + '/client/templates');
-app.set('view engine', 'jade');
+app.set('views', 'assets/templates')
+app.set('view engine', 'jade')
 
 // Assets
 
-var cache = require('./server/cache');
-var environment = new (mincer.Environment);
+var cache = require('./server/cache')
+var assets = require('./server/assets')
 
-[ 'bower_components', 'fonts', 'images', 'scripts', 'styles', 'templates' ].forEach(function(folder) {
-  environment.appendPath('client/' + folder);
-});
+if (env == 'production') {
+  app.use('/assets', cache('hours', 3))
+}
 
-app.configure('production', function () {
-  app.use('/assets', cache('hours', 3));
-});
-app.use('/assets', mincer.createServer(environment));
-app.use(express.favicon('client/images/favicon.png'));
+app.use('/assets', assets)
+app.use(express.favicon('assets/images/favicon.png'))
 
 // Middleware
 
-app.use(express.bodyParser());
+app.use(express.bodyParser())
 
 app.use(function (req, res, next) {
   res.promise = function (promise) {
-    promise.then(res.json.bind(res, 200), res.json.bind(res, 422));
-  };
-  next();
-});
+    promise = promise.then(res.json.bind(res, 200))
+    promise.catch(res.json.bind(res, 422))
+  }
+  next()
+})
 
 // Routes
 
+var sitemap = require('./server/sitemap')
+
+app.get('/sitemap.xml', function (req, res) {
+  sitemap.toXML(function (xml) {
+    res.set('content-type', 'application/xml')
+    res.send(xml)
+  })
+})
+
 app.use(function (req, res, next) {
-  var regex = /^\/thoughts/;
+  var regex = /^\/thoughts/
   return regex.test(req.path) 
     ? res.redirect(req.path.replace(regex, '/articles'))
-    : next();
-});
+    : next()
+})
 
 app.use(function (req, res, next) {
-  var accept = req.accepted[0].subtype;
+  var accept = req.accepted[0].subtype
   return accept === 'html'
     ? res.render('index', { title: 'AJ Ostrow' })
-    : next();
-});
+    : next()
+})
 
-require('./server/routes')(app);
-app.use(app.routes);
+require('./server/routes')(app)
+app.use(app.routes)
 
-http.createServer(app).listen(process.env.PORT || 8000);
+app.listen(process.env.PORT || 8000)
 
 // Seed
 
-require('./db/seed');
+require('./db/seed')

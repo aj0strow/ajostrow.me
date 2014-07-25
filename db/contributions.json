@@ -1,0 +1,44 @@
+[
+  {
+    "name": "cmtm/myCourses-shedder",
+    "description": "Makes myCourses a little less crappy by removing some of the visual clutter",
+    "url": null,
+    "pushed": 1360472400000
+  },
+  {
+    "name": "presidentbeef/brakeman",
+    "description": "A static analysis security vulnerability scanner for Ruby on Rails applications",
+    "url": "http://brakemanscanner.org/",
+    "pushed": 1380859200000
+  },
+  {
+    "name": "intridea/grape-entity",
+    "description": "Entities - a simple Facade to use with your models and API - extracted from Grape.",
+    "url": null,
+    "pushed": 1391144400000
+  },
+  {
+    "name": "nomad/houston",
+    "description": "Apple Push Notifications; No Dirigible Required",
+    "url": "http://nomad-cli.com",
+    "pushed": 1399867200000
+  },
+  {
+    "name": "brenoc/flight-standalone",
+    "description": "A repo just to serve Flight standalone at Bower",
+    "url": null,
+    "pushed": 1403582400000
+  },
+  {
+    "name": "mikeal/request",
+    "description": "Simplified HTTP request client.",
+    "url": null,
+    "pushed": 1403841600000
+  },
+  {
+    "name": "tinalatif/flat.icns",
+    "description": "A flat icon set for OS X",
+    "url": "http://flaticns.com",
+    "pushed": 1402891200000
+  }
+]
