@@ -797,5 +797,14 @@
       "markdown"
     ],
     "posted": 1404125631582
+  },
+  {
+    "title": "Birthday Problem",
+    "blurb": "exploring probability with julia lang",
+    "slug": "birthday-problem",
+    "tags": [
+      "julia"
+    ],
+    "posted": 1406565292101
   }
 ]
