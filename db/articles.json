@@ -816,5 +816,14 @@
       "mongodb"
     ],
     "posted": 1407162508860
+  },
+  {
+    "title": "Gentle Typeahead",
+    "blurb": "improve suggestions with index-weighted levenshtein distance",
+    "slug": "gentle-typeahead",
+    "tags": [
+      "javascript"
+    ],
+    "posted": 1407782066951
   }
 ]
