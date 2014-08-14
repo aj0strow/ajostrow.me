@@ -1,14 +1,14 @@
-A couple months ago I wrote [an article on fixing twitter mentions](http://www.ajostrow.me/articles/fixing-twitter-mentions). As a side note it always amazes me how much my I used to suck. A friend told me improvement is hard to notice in the short term.
+A couple months ago I wrote [an article on fixing twitter mentions](http://www.ajostrow.me/articles/fixing-twitter-mentions). As a side note it always amazes me how much I used to suck. A friend once told me improvement is hard to notice in the short term. Very true.
 
 ### Twitter Text
 
-This shouldn't be an article because Twitter open sources everything. Lets give it a shot.
+This shouldn't be an article because Twitter open sources everything. Let's give it a shot.
 
 ```sh
 $ bower install twitter-text --save
 ```
 
-And rendering the tweet text as html should be simple enough.
+Rendering the tweet text as html should be simple.
 
 ```javascript
 // tweet text -> html
@@ -18,7 +18,7 @@ function render (text) {
 }
 ```
 
-However if you try it out on a url it doesn't work without the protocol. Equally frustrating is that the url is not truncated. 
+However if you try it out on a url it doesn't work without the protocol. Equally frustrating is that the url isn't truncated. 
 
 ```javascript
 render('Google is http://www.google.com')
@@ -64,7 +64,7 @@ Now the real challenge of url autolinking with shortened display text. Building 
     extractEntitiesWithIndices(text, {extractUrlsWithoutProtocol: false});
 ```
 
-To fix it the autolinking need be done in more steps.
+To fix autolinking can be done in two steps.
 
 ```javascript
 function autolink (text) {
@@ -73,7 +73,7 @@ function autolink (text) {
 }
 ```
 
-Not bad but the urls are still potentially enormous. Deeper into the twitter text package seems an opportunity to provide a display url.
+Better, tho the urls are still potentially enormous. Deeper into the twitter text package seems an opportunity to provide a display url.
 
 ```javascript
 // linkTextWithEntity(entity, options) ~ line 587
@@ -82,7 +82,7 @@ Not bad but the urls are still potentially enormous. Deeper into the twitter tex
     var expandedUrl = entity.expanded_url;
 ```
 
-Sweet. Url entities just need a couple properties added. Remove leading protocol or www subdomain and truncate the path with a horizontal ellipsis.
+Sweet. The display url should probably remove the leading protocol or www subdomain and truncate the path with a horizontal ellipsis. I went with a length of thirty.
 
 ```javascript
 function shorten (url, length) {
@@ -96,7 +96,7 @@ function shorten (url, length) {
 }
 ```
 
-The length parameter must be played with a bit but I went with around 30. The entities still need to be fixed tho. Also a simpler approach to fix mentions is to adjust the first index for each mention entity. 
+The entities still need to be fixed tho. A simpler fix for mentions is to adjust the first index for each mention entity instead of using the regular expression. 
 
 ```javascript
 function fixEntity (entity) {
@@ -114,7 +114,7 @@ function fixEntity (entity) {
 
 ### Render Tweets
 
-Finally to render tweets.
+Finally to render a tweet.
 
 ```javascript
 function autolink (text) {
@@ -127,7 +127,7 @@ function autolink (text) {
 }
 ```
 
-With this basis its not too hard to render image links too.
+With this basis it's not too hard to render image links too.
 
 ```javascript
 if (entity.url && /(jpe?g|png|gif$)/.test(entity.url)) {
@@ -151,7 +151,7 @@ listClass: 'tweet-url list-slug'
 listUrlBase: 'https://twitter.com/'
 ```
 
-This is cool because it allows reuse of Twitter's code to implement @mentions and #hashtags on your own hot new social site. 
+This is cool because it allows reuse of Twitter's code to implement @mentions and #hashtags on your hot new social site. 
 
 ```javascript
 twttr.txt.extractEntitiesWithIndices(text, {
