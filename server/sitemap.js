@@ -1,7 +1,7 @@
 var createSitemap = require('sitemap').createSitemap
 
 var sitemap = createSitemap({
-  hostname: 'http://ajostrow.me',
+  hostname: 'http://www.ajostrow.me',
   cacheTime: 600000,
   urls: [
     { url: '/about', changefreq: 'monthly' },
