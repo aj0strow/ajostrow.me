@@ -835,5 +835,14 @@
       "javascript"
     ],
     "posted": 1407895777332
+  },
+  {
+    "title": "Sensor Data",
+    "blurb": "thoughts on the perfect time series database",
+    "slug": "sensor-data",
+    "tags": [
+      "mcgill"
+    ],
+    "posted": 1409699471062
   }
 ]
