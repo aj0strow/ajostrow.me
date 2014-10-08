@@ -844,5 +844,16 @@
       "mcgill"
     ],
     "posted": 1409699471062
+  },
+  {
+    "title": "Ship Web Applications",
+    "blurb": "pain-free workflow to ship ambitious web apps quickly",
+    "slug": "ship-web-applications",
+    "tags": [
+      "divshot",
+      "gulp",
+      "heroku"
+    ],
+    "posted": 1412736468248
   }
 ]
