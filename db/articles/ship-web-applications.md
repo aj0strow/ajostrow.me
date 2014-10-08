@@ -1,4 +1,4 @@
-In late 2011 I was 18 years old and had never written JavaScript code. It's been three years, and I've since have built a number of web apps. Through trial and error here is my workflow.
+In late 2011 I was 18 years old and had never written JavaScript code. It's been three years, and I've since built a number of web apps. Through trial and error here is my workflow.
 
 Note: if you like to write and maintain your own libraries, deploy servers, monitor and backup database clusters, learn commands like `logrotate`, mess with Docker, or other fun things this article isn't for you. If you want to ship in a month, this might be helpful.
 
