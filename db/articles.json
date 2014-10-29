@@ -865,5 +865,15 @@
       "ruby"
     ],
     "posted": 1413589004933
+  },
+  {
+    "title": "Getting Over Rails",
+    "blurb": "how to structure ruby rack applications",
+    "slug": "getting-over-rails",
+    "tags": [
+      "ruby",
+      "rack"
+    ],
+    "posted": 1414545236245
   }
 ]
