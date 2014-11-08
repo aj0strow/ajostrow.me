@@ -875,5 +875,16 @@
       "rack"
     ],
     "posted": 1414545236245
+  },
+  {
+    "title": "Background Video",
+    "blurb": "convert video formats and display a full screen background",
+    "slug": "background-video",
+    "tags": [
+      "ffmpeg",
+      "bower",
+      "jquery"
+    ],
+    "posted": 1415413461918
   }
 ]
