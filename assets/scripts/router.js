@@ -9,7 +9,6 @@ Ostrow.Router = Backbone.Router.extend({
       el: '#recent-articles',
       collection: this.page(0)
     });
-    this.on()
   },
 
   routes: {
