@@ -1,11 +1,91 @@
 .projects
-  h3 ajostrow.me
-  img(src="/assets/stacks/ajostrow-me.png")
-  h3 api.modde.co
-  img(src="/assets/stacks/modde-api.png")
-  h3 thinkwire.com
-  img(src="/assets/stacks/thinkwire.png")
-  h3 hoodlink (vpn only)
-  img(src="/assets/stacks/hoodlink.png")
-  h3 mastermind (android app)
-  img(src="/assets/stacks/mastermind.png")
+  .project
+    h3 Leaderboard
+    p
+      a(href="https://github.com/aj0strow/leaderboard") source code
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="https://leaderboard-social.firebaseapp.com") website
+    p 
+      | Oren runs a satirical campus news outlet, and wanted to see the facebook likes of his page eclipse
+      | other student publications. I started by hard-coding an array of page ids, but figured it was
+      | an opportunity for a little hack. 
+  .project
+    h3 Carbon Savings
+    p
+      a(href="https://github.com/aj0strow/carbonsavings") source code
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="https://github.com/aj0strow/utilitieskingston") node package
+    p
+      | Howard hired me to provide a small api for Queens University residences energy usage. The 
+      | caveat being all data needed to be scraped from a very unreliable source. 
+  .project
+    h3 Brainer
+    p
+      a(href="https://itunes.apple.com/app/id893689632") app store
+    p
+      | Anthony brought me on to write the api for a quiz app. He insisted on using Parse, so requests
+      | are slow but reliable. At first we encouraged in-app purchase, but that isn't the plan going
+      | forward. It has ~350 monthly active users. 
+  .project
+    h3 Les Stations de Montréal
+    p
+      a(href="https://github.com/aj0strow/stm.brendanleigh.org") source code
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="http://stm.brendanleigh.org/") website
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="http://www.reddit.com/r/montreal/comments/2i45sz/my_roommate_just_released_an_incredible/") reddit
+    p
+      | Brendan took photographs at every metro station in montreal, and picked one per station for an 
+      | interactive map. The transitions leave a bit to be desired, and it should prolly mention arrow 
+      | keys. 
+  .project
+    h3 Modde, The Fashion App
+    p
+      a(href="https://itunes.apple.com/ca/app/id866817591") app store
+    p
+      | Artur was looking for a co-founder to build a fashion app. Tag the brand on the clothing item.
+      | We pivoted from a website to a native app, and shipped a new version every week. We had high 
+      | hopes and a balanced team, but never exceeded five hundred users. We've moved on to greener 
+      | pastures. 
+  .project
+    h3 Fumehood Link
+    p
+      a(href="https://github.com/glencrossbrunet/sparse_collection") ruby gem
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="https://github.com/glencrossbrunet/backbone-panorama") javascript plugin
+    p
+      | We built a fumehood monitoring service for science labs. There are strict regulations
+      | on air quality, so open fumehoods use energy proportional to open-ness. Unfortunately we 
+      | overestimated the savings due to outlier early data. A lesson in depending on large instututions 
+      | \(don't) and a naive attempt at inhomogeneous time series calculations. 
+  .project
+    h3 Steam Prediction
+    p
+      a(href="https://github.com/glencrossbrunet/mcgill-steam") source code
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="http://mcgill-steam.herokuapp.com/") website
+    p
+      | Marc founded the McGill Energy Project to lower energy use on campus. He learned that campus steam 
+      | generators burn gas when starting and stopping, and have an ideal capacity. We predicted steam 
+      | consumption using weather data so operators could make informed decisions, but the savings never 
+      | materialized. A researcher at Berkeley actually contacted me for help getting R running on
+      | Heroku with a custom buildpack. 
+  .project
+    h3 Score 4 More
+    p
+      a(href="https://github.com/aj0strow/espn-scraper") ruby gem
+    p
+      | Tal approached me to build a charity engine for professional and collegiate sports teams. 
+      | Fans would pledge to donate per point scored. I built a prototype and he pitched it, but we
+      | couldn't land a deal. The stats scraper is my most-starred repository though. 
+  .project
+    h3 Mastermind
+    p
+      a(href="https://github.com/aj0strow/mastermind") source code
+      span(style="padding-left: 10px; padding-right: 10px;") •
+      a(href="https://play.google.com/store/apps/details?id=com.ostrow.mastermind&hl=en") play store
+    p
+      | In 1st year I wanted to write an Android app, and remembered the board game
+      | where you try to crack the code with deductive logic. Jacob helped create the image assets. 
+      | It turns out lots of people had the same idea, and thus a lesson in responsive xml layouts
+      | became a lesson in market research. It got over 10k installs and a 3.4 rating.
