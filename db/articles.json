@@ -886,5 +886,14 @@
       "jquery"
     ],
     "posted": 1415413461918
+  },
+  {
+    "title": "CoffeeScript DSL",
+    "blurb": "add methods into coffee-script function scope",
+    "slug": "coffeescript-dsl",
+    "tags": [
+      "coffescript"
+    ],
+    "posted": 1418942044089
   }
 ]
