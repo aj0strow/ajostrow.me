@@ -895,5 +895,14 @@
       "coffescript"
     ],
     "posted": 1418942044089
+  },
+  {
+    "title": "Animated Dots",
+    "blurb": "animation to convey a user is typing",
+    "slug": "animated-dots",
+    "tags": [
+      "css"
+    ],
+    "posted": 1419281724343
   }
 ]
