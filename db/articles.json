@@ -904,5 +904,15 @@
       "css"
     ],
     "posted": 1419281724343
-  }
+  },
+	{
+		"title": "Recursive Hashids",
+		"blurb": "recursively encode and decode numeric ids",
+		"slug": "recursive-hashids",
+		"tags": [
+			"koa",
+			"node"
+		],
+		"posted": 1425510321223
+	}
 ]
