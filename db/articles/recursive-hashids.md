@@ -33,23 +33,23 @@ var traverse = require('traverse')
 var _ = require('lodash')
 
 function encode (object) {
-	return traverse(object).map(function () {
-		if (_.endsWith(this.key, 'id') && _.isNumber(this.node)) {
-			return hashids.encode(this.node)
-		} else {
-			return this.node
-		}
-	})
+  return traverse(object).map(function () {
+    if (_.endsWith(this.key, 'id') && _.isNumber(this.node)) {
+      return hashids.encode(this.node)
+    } else {
+      return this.node
+    }
+  })
 }
 
 function decode (object) {
-	return traverse(object).map(function () {
-		if (_.endsWith(this.key, 'id') && _.isString(this.node) && this.node.length == 8) {
-			return hashids.decode(this.node)[0]
-		} else {
-			return this.node
-		}
-	})
+  return traverse(object).map(function () {
+    if (_.endsWith(this.key, 'id') && _.isString(this.node) && this.node.length == 8) {
+      return hashids.decode(this.node)[0]
+    } else {
+      return this.node
+    }
+  })
 }
 ```
 
@@ -90,9 +90,9 @@ app.use(function * (next) {
 app.use(function * () {
   // render list of objects
 
-	this.body = _.times(100, function (i) {
-		return { id: i, name: 'User #' + i, balance: Math.random() * 10000 }
-	})
+  this.body = _.times(100, function (i) {
+    return { id: i, name: 'User #' + i, balance: Math.random() * 10000 }
+  })
 })
 
 app.listen(8000)
@@ -113,9 +113,9 @@ $ time curl localhost:8000
     "balance": 6245.425492525101 },
     ...
 
-real	0m0.028s
-user	0m0.005s
-sys	0m0.007s
+real  0m0.028s
+user  0m0.005s
+sys 0m0.007s
 ```
 
 Fast enough for me. To parse the request body, wrap the normal parser in a new generator. 
