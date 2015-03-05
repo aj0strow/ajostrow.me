@@ -1,4 +1,4 @@
-I mention **[hashids](http://hashids.org/)** pretty frequently, but thought this was nifty enough to share. I've been writing a server with `koa` and `postgresql`, but trying to avoid numberic ids in json request and response bodies. The idea is to output encoded numeric ids as hash ids, and input decoded hashids as numeric ids. 
+I mention **[hashids](http://hashids.org/)** pretty frequently, but thought this was nifty enough to share. I've been writing a server with `koa` and `postgresql`, but trying to avoid numeric ids in json request and response bodies. The idea is to output encoded numeric ids as hash ids, and input decoded hashids as numeric ids. 
 
 ### Hashids
 
