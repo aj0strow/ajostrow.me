@@ -62,7 +62,7 @@ It's also possible to symlink folders. For example:
 mkdir a
 ln -s a b
 touch b/file.txt
-ln a
+ls a
 #> file.txt
 ```
 
