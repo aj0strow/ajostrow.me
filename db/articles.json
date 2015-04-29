@@ -914,5 +914,15 @@
 			"node"
 		],
 		"posted": 1425510321223
-	}
+	},
+  {
+    "title": "Put Go Wherever You Like",
+    "blurb": "for the polyglots out here",
+    "slug": "put-go-wherever-you-like",
+    "tags": [
+      "go",
+      "unix"
+    ],
+    "posted": 1430325198341
+  }
 ]
