@@ -109,4 +109,4 @@ ln -s src/github.com/company/project-server ~/projects/project/server
 cd ~/projects/project/server
 ```
 
-You can use git, the go command, everything. It should just work. Tweet [@aj0strow](https://twitter.com/aj0strow) if that's not true, or if you wanna say hi. 
+You can use git, the go command, everything. It should just work, but tweet [@aj0strow](https://twitter.com/aj0strow) if something breaks. 
