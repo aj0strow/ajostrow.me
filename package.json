@@ -26,7 +26,7 @@
   "scripts": {
     "start": "node ./app.js",
     "test": "./node_modules/mocha/bin/mocha",
-    "postinstall": "cd assets && ../node_modules/bower/bin/bower install"
+    "postinstall": "cd assets && ../node_modules/.bin/bower install"
   },
   "engines": {
     "node": "0.10"
