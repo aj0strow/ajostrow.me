@@ -40,5 +40,17 @@
     "description": "Backbone bindings for Firebase",
     "url": null,
     "pushed": 1417781700000
+  },
+  {
+    "name": "dlmanning/gulp-sass",
+    "description": "SASS plugin for gulp",
+    "url": null,
+    "pushed": 1437284460000
+  },
+  {
+    "name": "divshot/superstatic",
+    "description": "Superstatic: a static file server for fancy apps.",
+    "url": "http://www.superstatic.org",
+    "pushed": 1434728992334
   }
 ]
