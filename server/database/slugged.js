@@ -6,7 +6,7 @@ module.exports = function slugged (ns) {
   _.extend(ns, {
 
     lookup: function (slug) {
-      return db.get(ns.key('slugs', slug)).then(ns.find);
+      return db.get(ns.key('slugs', slug)).then(ns.find || _.identity);
     },
 
     slug: function (id, slug) {
