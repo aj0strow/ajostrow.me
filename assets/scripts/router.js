@@ -12,14 +12,10 @@ Ostrow.Router = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'redirect',
+    '': 'about',
     'about': 'about',
     'articles(/:q)': 'articles',
     'projects': 'projects'
-  },
-
-  redirect: function () {
-    Backbone.history.navigate('about', true);
   },
 
   about: function () {

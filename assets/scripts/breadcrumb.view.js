@@ -19,7 +19,7 @@ Ostrow.BreadcrumbView = Backbone.View.extend({
       parts.push(part);
       this.crumbs.push({ 
         path: parts.join('/'), 
-        title: _.titleize(part)
+        title: _.titleize(part || 'About')
       });
     }, this);
     this.render();

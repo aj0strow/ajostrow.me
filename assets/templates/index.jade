@@ -15,12 +15,8 @@ html(lang="en")
           .row
             .col-md-12.me
               - src = "http://graph.facebook.com/599647268/picture?height=200&type=square&width=200"
-              img(src=src alt="AJ Ostrow").img-circle
-          .row
-            .col-md-12
-              a(href="/about").menu About
-              a(href="/articles").menu Articles
-              a(href="/projects").menu Projects
+              a(href="/")
+                img(src=src alt="AJ Ostrow").img-circle
           .row
             .col-md-12
               a(href="http://stackoverflow.com/users/824377/ajcodez" target="_blank").social
@@ -33,9 +29,17 @@ html(lang="en")
                 img(src="/assets/social/twitter.png" alt="twitter")
           .row
             hr.col-md-9.col-md-offset-1
-          .row.hidden-xs
+          .row.hidden-sm.hidden-xs
             .col-md-12
               ul#recent-articles.text-left.recent-articles
+          .row
+            .col-md-12.text-left.pad-left
+              br.hidden-xs.hidden-sm
+              a(href="/articles").pad-left
+                span All Articles
+                span.small &nbsp;&#x276F;
+              br
+              br
         .col-md-8.scroll
           ol#breadcrumb.breadcrumb
           #ostrow.layout
