@@ -934,5 +934,16 @@
       "react"
     ],
     "posted": 1437178181436
+  },
+  {
+    "title": "S3 Client Uploads",
+    "blurb": "everything you need to upload straight to amazon servers",
+    "slug": "s3-client-uploads",
+    "tags": [
+      "javascript",
+      "ruby",
+      "aws"
+    ],
+    "posted": 1444075324406
   }
 ]
