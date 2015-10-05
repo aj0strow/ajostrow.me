@@ -102,7 +102,9 @@ To upload a file from `input[type="file"]` you need to read it into an array of 
 
 ```javascript
 function requestUrl (user) {
-  return fetch('/uploads', { user: user })
+  return fetch('/uploads', { user: user }).then(function (response) {
+    return response.json()
+  })
 }
 
 function readFile (file) {
@@ -129,11 +131,7 @@ function uploadFile (user, file) {
       body: new Int8Array(bytes),
     })
   }).then(function (response) {
-    if (response.status >= 200 && response.status < 300) {
-      return response.json()
-    } else {
-      throw new Error('upload failed')
-    }
+    return response.json()
   })
 }
 ```
