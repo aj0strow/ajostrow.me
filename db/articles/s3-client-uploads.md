@@ -128,6 +128,12 @@ function uploadFile (user, file) {
       headers: { 'Content-Type': file.type },
       body: new Int8Array(bytes),
     })
+  }).then(function (response) {
+    if (response.status >= 200 && response.status < 300) {
+      return response.json()
+    } else {
+      throw new Error('upload failed')
+    }
   })
 }
 ```
