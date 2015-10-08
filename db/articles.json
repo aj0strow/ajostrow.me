@@ -945,5 +945,14 @@
       "aws"
     ],
     "posted": 1444075324406
+  },
+  {
+    "title": "Go Project Structure",
+    "blurb": "stealing clever ideas from other frameworks",
+    "slug": "go-project-structure",
+    "tags": [
+      "go"
+    ],
+    "posted": 1444278071837
   }
 ]
