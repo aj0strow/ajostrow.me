@@ -25,6 +25,10 @@ exports.slice = function (start, stop) {
   return __collection.slice(start, stop)
 }
 
+exports.count = function () {
+  return __collection.length
+}
+
 exports.find = function (slug) {
   return __index[slug]
 }

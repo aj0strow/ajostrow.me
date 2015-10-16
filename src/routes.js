@@ -8,7 +8,7 @@ module.exports = function (app) {
   var PER_PAGE = 30
   
   app.get('/api/articles', function (req, res) {
-    var index = (req.params.page|| 0) * PER_PAGE
+    var index = (req.query.page || 0) * PER_PAGE
     var data = Articles.slice(index, index + PER_PAGE)
     res.status(200).json(data)
   })
