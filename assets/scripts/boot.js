@@ -22,4 +22,22 @@ $(function () {
   });
 
   Backbone.history.start({ pushState: true });
+  
+  function spin () {
+    var el = $('.me')
+    var clone = el.clone(true)
+    el.before(clone)
+    $('.me:last').remove()
+    clone.addClass('spin')    
+    setTimeout(spin, randWait())
+  }
+  
+  function randWait () {
+    var minute = 1000 * 60
+    var minimum = 3 * minute
+    var rand = Math.floor(Math.random() * 10 * minute)
+    return minimum + rand
+  }
+  
+  setTimeout(spin, randWait())
 });
