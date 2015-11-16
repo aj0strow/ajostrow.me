@@ -954,5 +954,16 @@
       "go"
     ],
     "posted": 1444278071837
+  },
+  {
+    "title": "Local Postgres Migrations",
+    "blurb": "try complex data migrations on production data",
+    "slug": "local-postgres-migrations",
+    "tags": [
+      "heroku",
+      "postgres",
+      "rails"
+    ],
+    "posted": 1447698689999
   }
 ]
