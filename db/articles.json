@@ -965,5 +965,17 @@
       "rails"
     ],
     "posted": 1447698689999
+  },
+  {
+    "title": "Unique Random Ids",
+    "blurb": "for brand new digital content",
+    "slug": "unique-random-ids",
+    "tags": [
+      "base58",
+      "uuid",
+      "firebase",
+      "mongodb"
+    ],
+    "posted": 1453153732700
   }
 ]
