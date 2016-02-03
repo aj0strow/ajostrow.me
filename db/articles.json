@@ -977,5 +977,16 @@
       "mongodb"
     ],
     "posted": 1453153732700
+  },
+  {
+    "title": "Homomorphic Transducers",
+    "blurb": "really generic way to reduce series",
+    "slug": "homomorphic-transducers",
+    "tags": [
+      "javascript",
+      "clojure",
+      "haskell"
+    ],
+    "posted": 1454534412985
   }
 ]
