@@ -48,6 +48,9 @@ Ostrow.Router = Backbone.Router.extend({
     if (this.currentView) { this.currentView.close(); }
     $('#ostrow').html(view.render().el);
     window.scrollTo(0, 0);
+    $('p').each(function () {
+      smartquotes(this)
+    })
     this.currentView = view;
   },
 

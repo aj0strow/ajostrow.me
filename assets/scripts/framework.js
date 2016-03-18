@@ -4,6 +4,7 @@
 //= require backbone/backbone
 //= require backbone-panorama/backbone.panorama
 //= require moment/min/moment.min
+//= require smartquotes/src/smartquotes
 
 window.Ostrow = {};
 
