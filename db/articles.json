@@ -988,5 +988,15 @@
       "haskell"
     ],
     "posted": 1454534412985
+  },
+  {
+    "title": "Reactive Form Submit",
+    "blurb": "use event streams for correct user experience",
+    "slug": "reactive-form-submit",
+    "tags": [
+      "javascript",
+      "kefir"
+    ],
+    "posted": 1460049502673
   }
 ]
