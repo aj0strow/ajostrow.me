@@ -7,6 +7,8 @@
   p {
     font-size: 16px;
     letter-spacing: 0.005em;
+    line-height: 20px;
+    margin-top: 24px;
   }
   
   pre {
@@ -20,6 +22,10 @@
     padding-right: 5px;
     border-radius: 2px;
     line-height: 1em;
+    
+    & + pre {
+      margin-top: -10px;
+    }
   }
   
   code {
@@ -41,5 +47,17 @@
     margin-top: 42px;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+  
+  ul {
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  
+  li {
+    max-width: 600px;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }

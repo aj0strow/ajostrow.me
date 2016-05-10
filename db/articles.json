@@ -998,5 +998,16 @@
       "kefir"
     ],
     "posted": 1460049502673
+  },
+  {
+    "title": "React Project Tips",
+    "blurb": "little choices that go a long way",
+    "slug": "react-project-tips",
+    "tags": [
+      "javascript",
+      "webpack",
+      "react"
+    ],
+    "posted": 1462892555804
   }
 ]
