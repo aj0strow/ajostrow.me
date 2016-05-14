@@ -1,18 +1,44 @@
 
-I've been meaning to share some productivity tips for React development. It can be daunting to establish project structure, and lots of patterns simply break down once an app grows into a fully featured product. These are opinionated choices based on my experience building 3 react websites myself and cleaning up 1 app written by a contractor this past year. 
-
-For context: I work with a design studio who provides me Sketch 3 files. I write the stylesheets mostly by copy-paste from sketch and use flexbox for layout. I write the server endpoints to support the features too, but none of my projects have achieved much success yet, so the server side needs only correctness not performance. Most of my time is spent on front end user experience. 
+I've been meaning to share productive tips for React. It's daunting to establish project conventions, and lots of patterns are actually anti-patterns that break down as an app grows. These are opinionated choices based on my experience building 3 react websites and cleaning up 1 app written by a contractor this past year. 
 
 ### CSS Modules
 
-The default css loader pulls everything into the global namespace. The issue with this is you need to come up with a unique name for every non-conflicting component style. If you factor your app correctly, each component should be reasonably unique. 
+The default behavior of the css loader is to pull everything into the global css namespace. The problem is style colliding rules. You need to come up with a unique name for every element in every component. 
 
-One way to avoid style collision is with unique namespaces and nested selectors using SASS. The issue is you need to come up with unqiue names, and type them each time. 
-
-A little publicised feature of the [**webpack/css-loader**](https://github.com/webpack/css-loader) is [locally scoped modules](https://github.com/css-modules/css-modules) which means instead of relying on global class name, you assign the class name directly.
+It's no problem you say, I'll use nested SASS selectors.
 
 ```scss
-// bad: ugly namespace
+.MyApp--Component {
+  button {
+    background: red;
+  }
+}
+```
+
+It works! Sweet. Except when you optionally render a child component, which has a button too, suddenly that button is red. The nested style leaked into child components. 
+
+```html
+<div className="MyApp--Component">
+  <button>I'm red.</button>
+  <ChildComponent>
+    <!-- expanded to show content -->
+    <button>I'm also red, but shouldn't be.</button>
+  </ChildComponent>
+</div>
+```
+
+It's no problem you say, I just need to be more specific. 
+
+```scss
+.MyApp--Component--button {
+  background: red;
+}
+```
+
+Sweet, you did it! The component style is self-contained. A little publicised feature of the [**webpack/css-loader**](https://github.com/webpack/css-loader) is [locally scoped modules](https://github.com/css-modules/css-modules) which means instead of relying on global class name, you assign the class directly.
+
+```scss
+// bad: ugly namespace, leaks
 
 .MyApp--Component {
   padding: 20px;
@@ -55,23 +81,13 @@ import css from "./style.scss"
 </div>
 ```
 
-I know about inline styles like [**FormidableLabs/radium**](https://github.com/FormidableLabs/radium) but I find it's hard to write, looks like shit, and is always missing essential features like media selectors or animation keyframes. 
+I know about inline styles like [**FormidableLabs/radium**](https://github.com/FormidableLabs/radium) but I find it's hard to write, looks terrible, and is missing essential features like media selectors or animation keyframes. 
 
-The advantages are:
-
-* Less stress coming up with unique names. Module 1 can have a `.button` and Module 2 can also have `.button` and they can mean different things. 
-* No chance of collision. Normally classes collide in unpredictable ways which fuck up your design. 
-
-The disadvantages are:
-
-* Breaking components into sub-components requires refactoring stylesheets. I've found this to be a minor inconvenience for the benefits of no collision and easy naming. 
-* Forces you to use JS components intead of CSS components. Again, works for me. 
-
-Trust me, once you go modules you will never, ever go back. 
+In reality, you probably want a mix of global styles for buttons and forms, and local styles for borders, layout, and spacing. The inconvenience of moving styles when refactoring components is nothing compared to the benefit of clean selector names and no style leaks. 
 
 ### Components Are Folders
 
-When you have at least a `.jsx` and `.scss` file per component, you need to group the files togehter in a folder instead of using one `.jsx` file per component. 
+When you have at least a `.jsx` and `.scss` file per component, you need to group the files together in a folder instead of using one `.jsx` file per component. 
 
 ```sh
 /components
@@ -104,9 +120,10 @@ And after:
     index.js
     style.scss
     DropdownElement.jsx
+  /SearchBar
 ```
 
-If you want to add a search bar, add a new folder `/SearchBar` and your top-level folder structure hides all the complexity within `/Header`. Component folders *scale*. 
+If you want to add a search bar, add a new folder `/SearchBar` and your top-level component hides the complexity within `/Header`. Component folders *scale*. 
 
 ### Use Namespaces For Redux
 
@@ -124,7 +141,7 @@ My first inclination with [**reactjs/redux**](https://github.com/reactjs/redux) 
 }
 ```
 
-I think this structure is **wrong**. You want to partition by an arbitrary prefix key like `session` and then include all possible state variables to render the view. 
+It was a bad choice. Instead partition the reducers by an arbitrary prefix name like `session` and then include all possible state variables to render the view. 
 
 ```js
 {
@@ -159,11 +176,11 @@ I think this structure is **wrong**. You want to partition by an arbitrary prefi
 }
 ```
 
-It feels dirty to mix app state with server data, but at the end of the day your component needs both to render successfully. It reminds me how databases don't care about importance of data, like your email address and default profile link color are both treated equally as text columns. 
+It feels messy to mix app state with server data, but your component needs both types of data to render. It reminds me how databases don't differentiate importance of data, in that your email address and default profile link color are both treated equally as text columns. 
 
 ### Symbol Action Constants
 
-Instead of prefixing redux actions with the namespace, or writing really long globally unique action names, use an [es6 symbol](https://github.com/medikoo/es6-symbol). It's why they exist. 
+Redux examples online show long string constants or prefixed string constants. I prefer to use [es6 symbols](https://github.com/medikoo/es6-symbol). 
 
 ```js
 // bad: long global name
@@ -179,11 +196,13 @@ export const START_SESSION = "auth/START_SESSION"
 export const START_SESSION = Symbol("start session")
 ```
 
+Keep in mind this breaks saving the actions to replay the user experience. I've never done that, but if you plan to then don't use symbols.  
+
 ### Simple Async Suffixes
 
-When you make external api requests, there are always three actions involved: when you make the request, if it returns successfully, or if it errors. 
+When you need request-response actions, there are three action types involved: when you make the request, if it returns successfully, or if it errors. 
 
-I like the suffixes `_REQ, _OK, _ERR`. They're short to type, and clear in intention. I've seen a lot of `_REQUEST, _SUCCESS, _FAILURE` in open source. It's a lot of typing, and visually distracts from reading the actual action name. 
+I like the suffixes `_REQ, _OK, _ERR`. They're short to type, and clear in intention. I've mostly seen `_REQUEST, _SUCCESS, _FAILURE` in examples. It's a lot of typing, and visually distracts from reading the actual action name. 
 
 ```js
 // bad: long distracting suffix
@@ -207,7 +226,7 @@ export const GET_ARTICLES_ERR = Symbol()
 
 ### Connect Redux In Index
 
-With redux apps, you need to connect your data and expose your actions. Consider the component folder tip from earlier in the article.
+With redux apps, you need to connect data and expose actions. Consider the component folder tip from earlier in the article.
 
 ```sh
 /MyComponent
@@ -215,7 +234,7 @@ With redux apps, you need to connect your data and expose your actions. Consider
   index.js
 ```
 
-Keep the component file pure, and bind all the data and actions in the index file. This way you can unit test the component file with stubs, and you can see what data and actions a component hierarchy needs just by looking at the index file.
+Keep the component file pure and connect redux in the index file. This way you can unit test the component file with stubs, and you can see what data and actions a component hierarchy needs by looking at the index file. 
 
 ```jsx
 // index.js
@@ -246,11 +265,11 @@ class MyComponent extends React.Component {
 export default MyComponent
 ```
 
-When you bind action creators, do not do fancy shit like `import * as actions` just import them one at a time. It's documentation for what actions are available when you need to refactor in two months. 
+When you bind action creators, I would avoid `import * as actions` and instead import actions one at a time. The benefit is documentation in the future. 
 
 ### Avoid Linked State Mixin
 
-I clung onto this for a while, but it **sucks**. Binding data two-ways is simply lazy. Write out the action types, reduce the events, and pass the actions to the form component. It takes longer in the short-term, but it's better long-term because there's fewer subtle bugs like forms not clearing on submit, etc. 
+I clung onto this for a while, mostly because everyone online told me not to but couldn't provide a reason *why*. It turns out they were right, and the reason is empirical. Try it both ways the component hierarchy without linked state is better. 
 
 *Fin*
 
