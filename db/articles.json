@@ -1009,5 +1009,15 @@
       "react"
     ],
     "posted": 1462892555804
+  },
+  {
+    "title": "JWT Claims",
+    "blurb": "sign and verify jwt claims with golang",
+    "slug": "jwt-claims",
+    "tags": [
+      "golang",
+      "jwt"
+    ],
+    "posted": 1465595914009
   }
 ]
