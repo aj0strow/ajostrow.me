@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "node_modules/mocha/bin/mocha",
     "postinstall": "cd assets && ../node_modules/.bin/bower install"
   },
   "engines": {
