@@ -1019,5 +1019,16 @@
       "jwt"
     ],
     "posted": 1465595914009
+  },
+  {
+    "title": "Hosted Stack",
+    "blurb": "how to deploy your first web app",
+    "slug": "hosted-stack",
+    "tags": [
+      "heroku",
+      "netlify",
+      "cloudflare"
+    ],
+    "posted": 1467226126089
   }
 ]
