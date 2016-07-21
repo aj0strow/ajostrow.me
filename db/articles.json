@@ -1045,5 +1045,16 @@
       "javascript"
     ],
     "posted": 1468525896953
+  },
+  {
+    "title": "JSON Schema Middleware",
+    "blurb": "validate express request body using json schema",
+    "slug": "json-schema-middleware",
+    "tags": [
+      "jsonschema",
+      "express",
+      "javascript"
+    ],
+    "posted": 1469136612524
   }
 ]
