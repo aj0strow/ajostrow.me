@@ -12,14 +12,14 @@ The benefits of CI/CD is two-fold. First, you always have the latest version dep
 
 There are a number of cloud services that offer CI/CD. Here are the ones I know about that have low cost or free plans. 
 
-* GitLab
-* Drone
-* Codeship
-* Circle
-* Travis
-* Jenkins
+* [GitLab](https://about.gitlab.com/) - git + ci, enterprise
+* [Travis CI](https://travis-ci.org/) - free for open source projects
+* [Drone](https://drone.io/) - open source, hosted
+* [Codeship](https://codeship.com/)
+* [CircleCI](https://circleci.com/)
+* [Jenkins](https://jenkins.io/) - open source, enterprise
 
-I chose Circle for the configuration flexibility and excellent experience. It makes a difference having the build status in the favicon, the commands piped via websocket in realtime, and the result synced to GitHub.
+I chose CircleCI for the configuration flexibility and excellent experience. It makes a difference having the build status in the favicon, the commands piped via websocket in realtime, and the result synced to GitHub.
 
 ### Ubuntu Trusty
 
@@ -48,7 +48,6 @@ checkout:
 dependencies:
   pre: 
     - go get github.com/kardianos/govendor
-  
   override:
     - cd $ROOTPATH && govendor sync
 
