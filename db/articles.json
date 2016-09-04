@@ -1056,5 +1056,16 @@
       "javascript"
     ],
     "posted": 1469136612524
+  },
+  {
+    "title": "Go and Circle CI",
+    "blurb": "how to setup golang continuous integration with circle ci",
+    "slug": "go-circle-ci",
+    "tags": [
+      "golang",
+      "ci",
+      "circleci"
+    ],
+    "posted": 1472949438225
   }
 ]
