@@ -39,6 +39,7 @@ machine:
     GOPATH: /home/ubuntu/go
     PATH: '/usr/local/go/bin:/home/ubuntu/go/bin:$PATH'
     ROOTPATH: /home/ubuntu/go/src/{source-code-path}
+    TEST_DATABASE_NAME: testing
 
 checkout:
   post:
@@ -168,44 +169,29 @@ Circle comes with databases already installed. Keep in mind if you pipe output t
 ```sh
 # bin/test
 
-# Choose database name.
-db=testing
+set -e -o pipefail
 
 # Set needed env vars.
 export ENVIRONMENT=test
-export DATABASE_URL="postgres://localhost/$db?sslmode=disable"
-
-# Create a new database.
-psql -d postgres -c "CREATE DATABASE $db WITH ENCODING 'UTF8';" 1>&2
+export DATABASE_URL="postgres://localhost/$TEST_DATABASE_NAME?sslmode=disable"
 
 # Run all migrations.
+bin/migrate down 1>&2
 bin/migrate up 1>&2
 
 # Pass command line args to test command.
 govendor test +local "$@"
-
-# Capture the test result.
-code=$?
-
-# Drop the database.
-psql -d postgres -c "DROP DATABASE $db;" 1>&2
-
-# Exit with the test result. 
-exit $code
 ```
 
-Call the test command just like the `go` command and it will setup and teardown the database, and include all local packages.
-
-```sh
-bin/test -v
 ```
+# bin/circle
 
-In the `circle.yml` the new test override command would be:
+set -e -o pipefail
 
-```sh
-cd $ROOTPATH && bin/test -v | go-junit-report > $CIRCLE_TEST_REPORTS/go/junit.xml
+# Create a new database.
+psql -d postgres -c "CREATE DATABASE $TEST_DATABASE_NAME WITH ENCODING 'UTF8';" 1>&2
+
+bin/test -v | go-junit-report > $CIRCLE_TEST_REPORTS/go/junit.xml
 ```
 
 Thanks for reading!
-
-**[@aj0strow](https://twitter.com/aj0strow)**
