@@ -1067,5 +1067,18 @@
       "circleci"
     ],
     "posted": 1472949438225
+  },
+  {
+    "title": "Redux Route State",
+    "blurb": "how to save router state to a redux store",
+    "slug": "redux-route-state",
+    "tags": [
+      "react",
+      "react-router",
+      "redux",
+      "reselect",
+      "recompose"
+    ],
+    "posted": 1476918263294
   }
 ]
