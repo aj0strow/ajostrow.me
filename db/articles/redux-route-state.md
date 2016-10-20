@@ -108,7 +108,7 @@ Instead the solution is to wrap the entire application in a generic parent route
 // components/routestate/index.js
 
 import { PropTypes } from "react"
-import { compose, setPropTypes, mapProps } from "recompose"
+import { compose, setPropTypes, lifecycle } from "recompose"
 import { connect } from "react-redux"
 import { changeRouteState } from "store/route"
 
@@ -126,13 +126,13 @@ const enhance = compose(
     children: PropTypes.element.isRequired,
   }),
   
-  // Convert passed in components (and send redux action).
-  mapProps(
-    ({ changeRouteState, location, params, children }) => {
+  // Listen for prop changes (route changes) and send action.
+  
+  lifecycle({
+    componentWillReceiveProps({ changeRouteState, location, params }) {
       changeRouteState({ location, params })
-      return { children }
     }
-  )
+  })
 )
 
 const RouteState = ({ children }) => {
