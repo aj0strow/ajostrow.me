@@ -129,9 +129,12 @@ const enhance = compose(
   // Listen for prop changes (route changes) and send action.
   
   lifecycle({
+    componentWillMount() {
+      this.componentWillReceiveProps(this.props)
+    },
     componentWillReceiveProps({ changeRouteState, location, params }) {
       changeRouteState({ location, params })
-    }
+    },
   })
 )
 
