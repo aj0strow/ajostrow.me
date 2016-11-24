@@ -1080,5 +1080,14 @@
       "recompose"
     ],
     "posted": 1476918263294
+  },
+  {
+    "title": "Tiny ORM",
+    "blurb": "scan database rows into structs without reflection",
+    "slug": "tiny-orm",
+    "tags": [
+      "golang"
+    ],
+    "posted": 1480011925189
   }
 ]
