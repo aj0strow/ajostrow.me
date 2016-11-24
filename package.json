@@ -6,7 +6,7 @@
     "bower": "1.7.7",
     "express": "~3.4.8",
     "express-cache-control": "~1.0.2",
-    "highlight.js": "~8.0.0",
+    "highlight.js": "~9.0.0",
     "jade": "~1.1.5",
     "less": "~1.6.3",
     "lodash": "^3.10.1",

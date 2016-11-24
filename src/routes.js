@@ -20,6 +20,7 @@ module.exports = function (app) {
     Articles.findAndRender(req.params.slug).then(function (data) {
       res.status(200).json(data)
     }).catch(function (e) {
+      console.error(e.stack)
       if (/not found/i.test(e.message)) {
         res.status(404).json({ error: 'not found' })
       } else {

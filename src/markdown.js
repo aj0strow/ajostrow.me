@@ -1,7 +1,7 @@
 var bluebird = require('bluebird')
 var fs = bluebird.promisifyAll(require('fs'))
 var marked = bluebird.promisifyAll(require('marked'))
-var highlight = require('highlight.js')
+var hljs = require('highlight.js')
 
 // auto include heading ids
 
@@ -21,13 +21,7 @@ renderer.heading = function (text, level) {
 
 marked.setOptions({
   gfm: true,
-  highlight: function (code, lang) {
-    if (lang) {
-      return highlight.highlight(lang, code, true).value
-    } else {
-      return code
-    }
-  },
+  highlight: colorSyntax,
   renderer: renderer,
 })
 
@@ -37,6 +31,16 @@ function renderFile (file) {
 
 function render (text) {
   return marked.parseAsync(text)
+}
+
+function colorSyntax(code, lang) {
+  if (hljs.getLanguage(lang)) {
+    return hljs.highlight(lang, code, true).value
+  }
+  if (lang && lang != "txt" && lang != "text") {
+    console.warn("invalid code highlight: %s", lang)
+  }
+  return hljs.highlightAuto(code, []).value
 }
 
 exports.renderFile = renderFile
