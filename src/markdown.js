@@ -20,10 +20,14 @@ renderer.heading = function (text, level) {
 // render markdown
 
 marked.setOptions({
-  highlight: function (code) {
-    return highlight.highlightAuto(code).value
+  gfm: true,
+  highlight: function (code, lang) {
+    if (lang) {
+      return highlight.highlight(lang, code, true).value
+    } else {
+      return code
+    }
   },
-  
   renderer: renderer,
 })
 

@@ -11,7 +11,7 @@ The common theme is to use reflection to match column names with struct tags. It
 
 The reason developers use reflection to scan structs is to prevent code duplication. If you need to map columns only once, there's no issue.
 
-```
+```go
 // FindById()
 
   var user User
@@ -24,7 +24,7 @@ The reason developers use reflection to scan structs is to prevent code duplicat
 
 What happens when you load users in multiple functions? It gets repetitive. 
 
-```
+```go
 // FindByName()
 
 // FindByEmail()
@@ -66,7 +66,7 @@ type Event struct {
 
 You lose parity between the database schema and the struct. When you add new columns, you need to go back and update every select query otherwise it won't load. 
 
-```
+```go
 row := QueryRow(`
     SELECT id, email FROM users WHERE id = $1
 `, id)
