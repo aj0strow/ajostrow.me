@@ -1089,5 +1089,17 @@
       "golang"
     ],
     "posted": 1480011925189
+  },
+  {
+    "title": "Typed Redux",
+    "blurb": "how to structure a complete redux store using typescript",
+    "slug": "typed-redux",
+    "tags": [
+      "typescript",
+      "redux",
+      "react",
+      "javascript"
+    ],
+    "posted": 1481322010089
   }
 ]
