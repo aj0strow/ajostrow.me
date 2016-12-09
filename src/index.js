@@ -14,6 +14,8 @@ function root (pathname) {
 
 var app = express()
 
+app.use(express.static('public'))
+
 app.set('views', root('assets/templates'))
 app.set('view engine', 'jade')
 
