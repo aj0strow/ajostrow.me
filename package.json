@@ -2,24 +2,24 @@
   "private": true,
   "name": "ajostrow.me",
   "dependencies": {
-    "bluebird": "^2.10.1",
+    "bluebird": "2.10.1",
     "bower": "1.7.7",
-    "express": "~3.4.8",
-    "express-cache-control": "~1.0.2",
-    "highlight.js": "~9.0.0",
-    "jade": "~1.1.5",
-    "less": "~1.6.3",
-    "lodash": "^3.10.1",
-    "marked": "~0.3.1",
-    "mincer": "~0.5.13",
-    "sitemap": "^0.7.3",
-    "stylus": "~0.42.2"
+    "express": "3.4.8",
+    "express-cache-control": "1.0.2",
+    "highlight.js": "9.0.0",
+    "jade": "1.1.5",
+    "less": "1.6.3",
+    "lodash": "3.10.1",
+    "marked": "0.3.1",
+    "mincer": "0.5.13",
+    "sitemap": "0.7.3",
+    "stylus": "0.42.2"
   },
   "devDependencies": {
-    "mocha": "~1.17.1",
-    "mocha-as-promised": "~2.0.0",
-    "chai": "~1.9.0",
-    "chai-as-promised": "~4.1.0"
+    "mocha": "1.17.1",
+    "mocha-as-promised": "2.0.0",
+    "chai": "1.9.0",
+    "chai-as-promised": "4.1.0"
   },
   "scripts": {
     "start": "node index.js",
@@ -27,6 +27,6 @@
     "postinstall": "cd assets && ../node_modules/.bin/bower install"
   },
   "engines": {
-    "node": "0.10"
+    "node": "6.7.0"
   }
 }

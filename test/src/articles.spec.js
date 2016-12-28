@@ -12,12 +12,6 @@ describe('articles', function () {
     assert.deepEqual(article, Articles.first())
   })
   
-  specify('path finds markdown file', function () {
-    var article = Articles.first()
-    var path = Articles.path(article.slug)
-    assert.equal(path.slice(-3), '.md')
-  })
-  
   specify('findAndRender should render markdown', function () {
     var slug = Articles.first().slug
     return Articles.findAndRender(slug).then(function (article) {
