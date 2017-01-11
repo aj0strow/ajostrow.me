@@ -46,4 +46,10 @@ $ ssh root@1.1.1.1
 ~# rmate .bashrc
 ```
 
+You can just ignore warnings for concurrent sessions.
+
+```
+Warning: remote port forwarding failed for listen port 52698
+```
+
 The end result is `mate` when the file is local and `rmate` when remote. 
