@@ -1101,5 +1101,17 @@
       "javascript"
     ],
     "posted": 1481322010089
+  },
+  {
+    "title": "Edit Remote Files",
+    "blurb": "configure rmate and ssh remote port forwarding",
+    "slug": "edit-remote-files",
+    "tags": [
+      "ssh",
+      "ubuntu",
+      "textmate",
+      "devops"
+    ],
+    "posted": 1484107310502
   }
 ]
