@@ -1109,9 +1109,19 @@
     "tags": [
       "ssh",
       "ubuntu",
-      "textmate",
-      "devops"
+      "textmate"
     ],
     "posted": 1484107310502
+  },
+  {
+    "title": "Nginx Push State",
+    "blurb": "deploy a webpack build on ubuntu",
+    "slug": "nginx-push-state",
+    "tags": [
+      "ssh",
+      "ubuntu",
+      "nginx"
+    ],
+    "posted": 1484358423297
   }
 ]
