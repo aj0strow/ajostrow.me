@@ -47,10 +47,13 @@ app.use(function (req, res, next) {
 })
 
 app.use(function (req, res, next) {
-  var accept = req.accepted[0].subtype
-  return (accept === 'html' && !req.xhr)
-    ? res.render('index', { title: 'AJ Ostrow' })
-    : next()
+	if (req.accepted.length == 0) {
+		return res.status(204).end()
+	}
+	var accept = req.accepted[0].subtype
+	return (accept === "html" && !req.xhr)
+		? res.render("index", { title: "AJ Ostrow" })
+		: next()
 })
 
 require('./routes')(app)
