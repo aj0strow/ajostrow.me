@@ -1143,5 +1143,14 @@
 			"fastlane"
 		],
 		"posted": 1489098772052
+	},
+	{
+		"title": "Data Differencing",
+		"blurb": "save bytes when streaming data changes",
+		"slug": "data-differencing",
+		"tags": [
+			"json"
+		],
+		"posted": 1490192220920
 	}
 ]
