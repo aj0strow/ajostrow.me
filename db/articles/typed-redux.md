@@ -1,5 +1,7 @@
 This article is about building out a redux store in TypeScript. 
 
+> *Update - Please see [Redux Revisited](/articles/redux-revisited).*
+
 ### Redux Types
 
 Redux is a javascript library without types, so you need to write your own. 

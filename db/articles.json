@@ -1152,5 +1152,15 @@
 			"json"
 		],
 		"posted": 1490192220920
+	},
+	{
+		"title": "Redux Revisited",
+		"blurb": "designing a redux store in typescript",
+		"slug": "redux-revisited",
+		"tags": [
+			"typescript",
+			"redux"
+		],
+		"posted": 1490720745994
 	}
 ]
