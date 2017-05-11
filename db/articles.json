@@ -1162,5 +1162,14 @@
 			"redux"
 		],
 		"posted": 1490720745994
+	},
+	{
+		"title": "How To Golang",
+		"blurb": "tips and tricks after a year of golang",
+		"slug": "how-to-golang",
+		"tags": [
+			"golang"
+		],
+		"posted": 1494525429550
 	}
 ]
