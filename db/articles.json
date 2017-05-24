@@ -1171,5 +1171,14 @@
 			"golang"
 		],
 		"posted": 1494525429550
+	},
+	{
+		"title": "The Zen Of Cmp",
+		"blurb": "custom numeric comparisons using the cmp operator",
+		"slug": "the-zen-of-cmp",
+		"tags": [
+			"golang"
+		],
+		"posted": 1495558888909
 	}
 ]
