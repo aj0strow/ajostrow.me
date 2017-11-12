@@ -36,11 +36,14 @@ You can read more about the ideas behind CSS Modules on the dedicated [GitHub pa
             loader: "css-loader",
             options: {
                 modules: true,
+                localIdentName: "[local]-[hash:base64:5]",
             }
         },
     ],
 }
 ```
+
+The `localIdentName` option is a template for the generated style name. The default option generates style names that look like `_1Nq1MUcH2FbQhHgnoCy_dC` but the template above generates pretty class names that look like `header-gzP9Q` to avoid clashing names while preserving readability.
 
 ### Modular Stylesheets
 
