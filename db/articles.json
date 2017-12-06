@@ -1191,5 +1191,14 @@
 			"css"
 		],
 		"posted": 1509861718825
+	},
+	{
+		"title": "Custom API Context",
+		"blurb": "argument in favor of using a custom context type instead of open source",
+		"slug": "custom-api-context",
+		"tags": [
+			"golang"
+		],
+		"posted": 1512603069330
 	}
 ]
