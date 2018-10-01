@@ -8,6 +8,7 @@ module.exports = function (app) {
   var PER_PAGE = 30
   
   if (env === 'production') {
+    var cache = (new CacheControl).middleware
     app.use('/api/articles', cache('hour'))
   }
 
@@ -16,9 +17,6 @@ module.exports = function (app) {
     var data = Articles.slice(index, index + PER_PAGE)
     res.status(200).json(data)
   })
-
-  // Get one article and content
-  var cache = (new CacheControl).middleware
 
   app.get('/api/articles/:slug', function (req, res) {
     Articles.findAndRender(req.params.slug).then(function (data) {
