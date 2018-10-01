@@ -1,8 +1,9 @@
 var mincer = require('mincer')
 var environment = new (mincer.Environment)
 
+environment.appendPath('node_modules')
+
 var dirs = [
-  'bower_components',
   'fonts',
   'images',
   'scripts',

@@ -1,5 +1,5 @@
 var env = process.env['NODE_ENV']
 var port = process.env['PORT']
 
-var app = require('./src/index')
+var app = require('./server/app')
 app.listen(port || 8000)

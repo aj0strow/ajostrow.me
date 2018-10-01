@@ -1,10 +1,10 @@
-//= require jquery/jquery
-//= require underscore/underscore
+//= require jquery/dist/jquery.min
+//= require underscore/underscore-min
 //= require jade/runtime
 //= require backbone/backbone
 //= require backbone-panorama/backbone.panorama
 //= require moment/min/moment.min
-//= require smartquotes/src/smartquotes
+//= require smartquotes/dist/smartquotes
 
 window.Ostrow = {};
 

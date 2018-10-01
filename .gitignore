@@ -4,14 +4,8 @@
 # Node
 node_modules
 
-# Bower
-bower_components
-
 # New Relic
 *.log
-
-# Redis
-dump.rdb
 
 /tmp
 !tmp/.keep
