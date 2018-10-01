@@ -27,6 +27,6 @@
     "postinstall": "cd assets && ../node_modules/.bin/bower install"
   },
   "engines": {
-    "node": "6.7.0"
+    "node": "8.11.1"
   }
 }
