@@ -17,7 +17,6 @@
     "moment": "^2.22.2",
     "sitemap": "0.7.3",
     "smartquotes": "2.3.1",
-    "stylus": "0.42.2",
     "underscore": "1.9.1"
   },
   "devDependencies": {
