@@ -14,7 +14,7 @@
     "lodash": "3.10.1",
     "marked": "0.3.9",
     "mincer": "0.5.13",
-    "moment": "2.5.1",
+    "moment": "^2.22.2",
     "sitemap": "0.7.3",
     "smartquotes": "2.3.1",
     "stylus": "0.42.2",
