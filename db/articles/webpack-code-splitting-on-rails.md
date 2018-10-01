@@ -96,7 +96,7 @@ Rails.application.config.assets.paths << Rails.root.join("webpack")
 
 Include the webpack output bundle in `application.js`.
 
-```
+```js
 // app/assets/javascripts/application.js
 
 //= require main.bundle
@@ -108,7 +108,7 @@ At this point webpack should be working in development environment.
 
 Add a rake task to compile webpack in production and enhance the existing task for assets. It's better to compile in development mode because you don't need to minify the code twice (sprockets will do this already). 
 
-```
+```rb
 # lib/tasks/webpack.rake
 
 namespace :webpack do
@@ -157,7 +157,7 @@ module AssetsHelper
 end
 ```
 
-```rb
+```erb
 <!-- app/views/layouts/application.html.erb -->
 
   <head>
@@ -205,7 +205,7 @@ Here is the added code to `lib/tasks/webpack.rake`.
 
 In the end you can split modules by async importing and webpack will either load the module from the server in development mode or load the precompiled asset using the mapping in production. 
 
-```
+```js
 async function doWork() {
     const bigModule = await import("big-module")
 }
