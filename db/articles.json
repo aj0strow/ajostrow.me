@@ -1200,5 +1200,15 @@
 			"golang"
 		],
 		"posted": 1512603069330
+	},
+	{
+		"title": "Webpack Code Splitting On Rails",
+		"blurb": "quick integration directly with sprockets without using webpacker",
+		"slug": "webpack-code-splitting-on-rails",
+		"tags": [
+			"rails",
+			"webpack"
+		],
+		"posted": 1538414479255
 	}
 ]
