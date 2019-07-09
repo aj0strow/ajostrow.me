@@ -1219,5 +1219,15 @@
       "golang"
     ],
     "posted": 1557188064873
+  },
+  {
+    "title": "Export SystemD Logs to ElasticSearch",
+    "blurb": "minimum viable config for journalbeat",
+    "slug": "export-systemd-logs-to-elastic-search",
+    "tags": [
+      "systemd",
+      "elastic"
+    ],
+    "posted": 1562693766031
   }
 ]
