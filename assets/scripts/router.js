@@ -14,12 +14,17 @@ Ostrow.Router = Backbone.Router.extend({
   routes: {
     '': 'about',
     'about': 'about',
+    'thanks': 'thanks',
     'articles(/:q)': 'articles',
     'projects': 'projects'
   },
 
   about: function () {
     this.show(new Ostrow.AboutView);
+  },
+
+  thanks: function () {
+    this.show(new Ostrow.ThanksView);
   },
 
   articles: function (q) {
