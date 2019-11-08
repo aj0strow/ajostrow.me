@@ -1232,9 +1232,18 @@
   },
   {
     "title": "Billions",
-    "blurb": "Consume virtual resources like tap water",
+    "blurb": "consume virtual resources like tap water",
     "slug": "billions",
     "tags": [],
     "posted": 1569734417893
+  },
+  {
+    "title": "Debounce with React Hooks",
+    "blurb": "how to debounce server requests in react functional components",
+    "slug": "debounce-with-react-hooks",
+    "tags": [
+      "react"
+    ],
+    "posted": 1573199763902
   }
 ]
