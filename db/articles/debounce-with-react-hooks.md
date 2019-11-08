@@ -102,7 +102,7 @@ The answer is to pass the username and a signal to abort as function arguments.
       setAvailability('pick something')
       return
     }
-    setAvailability('not sure checking for you')
+    setAvailability('not sure checking')
     fetch(`/users/${username}`).then(response => {
       if (signal.aborted) {
         return
@@ -138,7 +138,7 @@ It can be simpler to set and clear timeouts instead of using a library `debounce
         setAvailability('pick something')
         return
       }
-      setAvailability('not sure checking for you')
+      setAvailability('not sure checking')
       fetch(`/users/${username}`).then(response => {
         if (aborted) {
           return
