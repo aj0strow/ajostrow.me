@@ -1245,5 +1245,14 @@
       "react"
     ],
     "posted": 1573199763902
+  },
+  {
+    "title": "Copy SSH Key to Server",
+    "blurb": "how to copy another public key to a remote server",
+    "slug": "copy-ssh-key-to-server",
+    "tags": [
+      "ssh"
+    ],
+    "posted": 1588812614570
   }
 ]
