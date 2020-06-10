@@ -1254,5 +1254,15 @@
       "ssh"
     ],
     "posted": 1588812614570
+  },
+  {
+	"title": "Idempotent Jobs",
+	"blurb": "Short and sweet example of making a function idempotent",
+	"slug": "idempotent-jobs",
+	"tags": [
+		"typescript",
+		"nodejs"
+	],
+	"posted": 1591749878551
   }
 ]
