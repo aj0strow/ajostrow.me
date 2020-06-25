@@ -874,5 +874,12 @@
     "slug": "connecting-shapes-in-overlays",
     "tags": ["svg"],
     "posted": 1592209718926
+  },
+  {
+    "title": "Lists of Objects",
+    "blurb": "the right data type to use every time",
+    "slug": "lists-of-objects",
+    "tags": ["mongodb"],
+    "posted": 1593061957920
   }
 ]
