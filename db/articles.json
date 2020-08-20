@@ -881,5 +881,12 @@
     "slug": "lists-of-objects",
     "tags": ["mongodb"],
     "posted": 1593061957920
+  },
+  {
+    "title": "How to Run a Script Overnight",
+    "blurb": "intro to tmux with examples",
+    "slug": "run-script-overnight",
+    "tags": ["tmux","ubuntu"],
+    "posted": 1597904380105
   }
 ]
