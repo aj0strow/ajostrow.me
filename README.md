@@ -4,21 +4,18 @@ install
 
 ```
 $ npm install
-$ brew install redis
 ```
 
 start in development
 
 ```
-$ redis-server > /dev/null &
 $ npm start
 ```
 
 test
 
 ```
-$ export PATH="$PATH":node_modules/.bin
-$ NODE_ENV=test mocha
+$ npm test
 ```
 
 article posted time
@@ -26,4 +23,3 @@ article posted time
 ```
 $ node -p '+new Date' | pbcopy
 ```
-
