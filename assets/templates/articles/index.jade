@@ -1,0 +1,17 @@
+extends ../layout
+
+block page
+  .articles
+    for article in articles
+      .col-md-12
+        a(href="/articles/#{article.slug}").block
+          h3= article.title
+        p= article.blurb
+  ul.pager
+    if page > 0
+      - var link = '/articles' + (page === 1 ? '' : '?page=' + (page - 1))
+      li.previous
+        a(href=link) &larr; prev
+    if hasNext
+      li.next
+        a(href="/articles?page=#{page + 1}") next &rarr;

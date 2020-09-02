@@ -8,7 +8,6 @@ var dirs = [
   'images',
   'scripts',
   'styles',
-  'templates',
 ]
 
 dirs.forEach(function (dir) {

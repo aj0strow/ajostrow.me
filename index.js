@@ -1,4 +1,3 @@
-var env = process.env['NODE_ENV']
 var port = process.env['PORT']
 
 var app = require('./server/app')

@@ -7,9 +7,7 @@
 // blurb (string)
 
 var lodash = require('lodash')
-var fs = require('fs')
 var path = require('path')
-var bluebird = require('bluebird')
 
 var markdown = require('./markdown')
 var json = require('../db/articles.json')

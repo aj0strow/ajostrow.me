@@ -25,5 +25,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "node_modules/mocha/bin/mocha"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }

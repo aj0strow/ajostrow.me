@@ -5,7 +5,8 @@ var sitemap = createSitemap({
   hostname: 'http://www.ajostrow.me',
   cacheTime: 600000,
   urls: [
-    { url: '/', changereq: 'monthly' },
+    { url: '/', changefreq: 'monthly' },
+    { url: '/thanks', changefreq: 'monthly' },
     { url: '/articles', changefreq: 'daily' },
   ],
 })

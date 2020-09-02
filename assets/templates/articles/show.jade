@@ -1,0 +1,8 @@
+extends ../layout
+
+block page
+  h1= article.title
+  div.text-muted posted #{duration}
+  br
+  .article
+    != article.html
