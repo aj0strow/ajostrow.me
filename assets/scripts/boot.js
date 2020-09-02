@@ -1,5 +1,6 @@
 //= require jquery/dist/jquery.min
-//= require underscore/underscore-min
+
+console.info('Welcome! Hope you enjoy the articles. - AJ')
 
 $(function () {
   function spin () {
@@ -8,7 +9,6 @@ $(function () {
     el.before(clone)
     $('.me:last').remove()
     clone.addClass('spin')    
-    setTimeout(spin, randWait())
   }
 
   document.addEventListener("visibilitychange", function() {
