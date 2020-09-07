@@ -47,10 +47,19 @@ h1 {
 }
 
 .layout {
-  padding-top: 30px;
-  padding-left: 2px;
+  padding-top: 32px;
   padding-bottom: 100px;
   overflow: hidden;
+}
+
+@media (min-width: @screen-md-min) {
+  .layout {
+    padding-top: 64px;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
 }
 
 .breadcrumb {
@@ -91,19 +100,6 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
-  .me {
-    display: none;
-  }
-}
-
-.menu {
-  display: inline-block;
-  padding: 10px;
-  margin-top: 3px;
-  margin-bottom: 8px;
-}
-
 .links {
   padding-top: 24px;
   padding-left: 10px;
@@ -118,6 +114,22 @@ h1 {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+.nav {
+  padding-top: 24px;
+}
+
+.nav-link {
+  font-size: 16px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  & + & {
+    margin-left: 24px;
   }
 }
 

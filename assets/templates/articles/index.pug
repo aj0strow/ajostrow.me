@@ -3,7 +3,7 @@ extends ../layout
 block page
   .articles
     for article in articles
-      .col-md-12
+      .article-item
         a(href=`/articles/${article.slug}`).block
           h3= article.title
         p= article.blurb
