@@ -1,19 +1,19 @@
-//= require jquery/dist/jquery.min
+document.addEventListener('DOMContentLoaded', function () {
+  console.info('Welcome! Hope you enjoy the articles. ~ AJ')
 
-console.info('Welcome! Hope you enjoy the articles. - AJ')
-
-$(function () {
-  function spin () {
-    var el = $('.me')
-    var clone = el.clone(true)
-    el.before(clone)
-    $('.me:last').remove()
-    clone.addClass('spin')    
-  }
-
-  document.addEventListener("visibilitychange", function() {
+  document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'visible') {
-      spin()
+      var logo = document.querySelector('.me')
+      if (!logo) {
+        return
+      }
+
+      // Restart CSS keyframes.
+      logo.classList.remove('spin')
+      logo.style.animation = 'none'
+      void logo.offsetHeight
+      logo.style.animation = null
+      logo.classList.add('spin')
     }
   })
 })
