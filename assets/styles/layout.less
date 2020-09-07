@@ -1,23 +1,29 @@
-@import "bootstrap/less/variables";
+@import 'bootstrap/less/variables';
 
 @border-radius-base: 0;
 @nav-pills-border-radius: 0;
 
-@import "bootstrap/less/mixins";
-@import "bootstrap/less/normalize";
-@import "bootstrap/less/scaffolding";
-@import "bootstrap/less/type";
-@import "bootstrap/less/grid";
-@import "bootstrap/less/breadcrumbs";
-@import "bootstrap/less/pager";
-@import "bootstrap/less/responsive-utilities";
+@import 'bootstrap/less/mixins';
+@import 'bootstrap/less/normalize';
+@import 'bootstrap/less/scaffolding';
+@import 'bootstrap/less/type';
+@import 'bootstrap/less/grid';
+@import 'bootstrap/less/breadcrumbs';
+@import 'bootstrap/less/pager';
+@import 'bootstrap/less/responsive-utilities';
 
 body {
   font-family: 'Hind', sans-serif;
   -webkit-text-size-adjust: none;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
 }
@@ -69,12 +75,12 @@ h1 {
 
 .me {
   padding-top: 20px;
-  
+
   img {
     width: 200px;
     height: 200px;
   }
-  
+
   &.spin {
     animation-name: spin;
     animation-duration: 680ms;
@@ -97,24 +103,59 @@ h1 {
 }
 
 .links {
-  padding-top: 20px;
+  padding-top: 24px;
+  padding-left: 10px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .social {
-  display: inline-block;
-  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
   height: 32px;
+  margin-right: 12px;
 
-  img {
-    border-radius: 1px;
-    width: 32px;
-    height: 32px;
-    background: #f3f3f3;
+  svg {
+    width: 24px;
+    height: 24px;
   }
 
-  &:hover img {
-    background: #fdfdfd
+  svg:hover {
+    animation: pulse 1s ease-out;
+    animation-iteration-count: infinite;
   }
+}
+
+.twitter {
+  fill: #1da1f2;
+}
+
+.github {
+  fill: #181717;
+}
+
+.goodreads {
+  fill: #663300;
+}
+
+.stackoverflow {
+  fill: #fe7a16;
+}
+
+.instagram {
+  fill: #d6249f;
 }
 
 .recent-articles li {
@@ -126,6 +167,6 @@ h1 {
   padding-left: 20px;
 }
 
-@import "pages/about";
-@import "pages/articles";
-@import "pages/projects";
+@import 'pages/about';
+@import 'pages/articles';
+@import 'pages/projects';
