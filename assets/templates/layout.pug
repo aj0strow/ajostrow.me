@@ -9,6 +9,7 @@ html(lang="en")
     link(rel="stylesheet" href=digest('layout.css'))
     link(rel="icon" href="/favicon.png" type="image/png")    
     meta(name="description" content="Personal blog, programming articles, projects.")
+    script(defer src=digest('boot.js'))
   body
     .container-fluid
       .row
@@ -62,4 +63,3 @@ html(lang="en")
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    script(src=digest('boot.js'))
