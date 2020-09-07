@@ -6,8 +6,8 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title= title
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind|Ubuntu:500|Droid+Sans+Mono")
-    link(rel="stylesheet" href="/assets/layout.css")
-    link(rel="stylesheet" href="/assets/highlight.js/styles/github-gist.css")
+    link(rel="stylesheet" href=digest('layout.css'))
+    link(rel="stylesheet" href=digest('highlight.js/styles/github-gist.css'))
     link(rel="icon" href="/favicon.png" type="image/png")    
     meta(name="description" content="Personal blog, programming articles, projects.")
   body
@@ -17,7 +17,7 @@ html(lang="en")
           .row
             .col-md-12.me
               a(href="/")
-                img(src="/assets/me.jpg" alt="AJ Ostrow").img-circle
+                img(src=digest('me.jpg') alt="AJ Ostrow").img-circle
           .row
             .col-md-12
               .links
@@ -63,4 +63,4 @@ html(lang="en")
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    script(src="/assets/boot.js")
+    script(src=digest('boot.js'))

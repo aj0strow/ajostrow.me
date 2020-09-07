@@ -14,5 +14,14 @@ dirs.forEach(function (dir) {
   environment.appendPath('assets/' + dir)
 })
 
-var server = mincer.createServer(environment)
-module.exports = server
+exports.createServer = function() {
+  return mincer.createServer(environment)
+}
+
+exports.getDigestPath = function(path) {
+  const asset = environment.findAsset(path)
+  if (!asset) {
+    throw new Error('missing digest for path ' + path)
+  }
+  return asset.digestPath;
+}

@@ -21,7 +21,7 @@ if (env == 'production') {
   app.use('/assets', cache('hours', 3))
 }
 
-app.use('/assets', assets)
+app.use('/assets', assets.createServer())
 
 // Routes
 
@@ -44,10 +44,15 @@ app.use(function (req, res, next) {
 
 app.use(function (req, res, next) {
   res.locals.recentArticles = Articles.slice(0, 8)
+
+  res.locals.digest = function (path) {
+    return '/assets/' + assets.getDigestPath(path)
+  }
+
   next()
 })
 
-app.get('/', function (req, res, next) {
+app.get('/', function (req, res) {
   res.render('about', {
     title: 'AJ Ostrow',
     breadcrumbs: [{ path: '/', title: 'About' }],
