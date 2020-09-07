@@ -34,19 +34,15 @@ html(lang="en")
           .row
             hr.col-md-9.col-md-offset-1
           .row
-            .col-md-12
-              ul.text-left.recent-articles
+            .col-md-12.text-left.recent-articles
+              ul.list-unstyled
                 for article in recentArticles
                   li
                     a(href=`/articles/${article.slug}`)= article.title
-          .row
-            .col-md-12.text-left.pad-left
-              br.hidden-xs.hidden-sm
-              a(href="/articles").pad-left
-                span All Articles
-                span.small &nbsp;&#x276F;
-              br
-              br
+              div.article-index-link
+                a(href="/articles")
+                  span All Articles
+                  span.small &nbsp;&#x276F;
         .col-md-3.hidden-md.hidden-lg
           .nav
             a(href="/").nav-link About
