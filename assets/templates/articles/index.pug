@@ -4,7 +4,7 @@ block page
   .articles
     for article in articles
       .col-md-12
-        a(href="/articles/#{article.slug}").block
+        a(href=`/articles/${article.slug}`).block
           h3= article.title
         p= article.blurb
   ul.pager
@@ -14,4 +14,4 @@ block page
         a(href=link) &larr; prev
     if hasNext
       li.next
-        a(href="/articles?page=#{page + 1}") next &rarr;
+        a(href=`/articles?page=${page + 1}`) next &rarr;

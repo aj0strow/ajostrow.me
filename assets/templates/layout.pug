@@ -38,7 +38,7 @@ html(lang="en")
               ul.text-left.recent-articles
                 for article in recentArticles
                   li
-                    a(href="/articles/#{article.slug}")= article.title
+                    a(href=`/articles/${article.slug}`)= article.title
           .row
             .col-md-12.text-left.pad-left
               br.hidden-xs.hidden-sm

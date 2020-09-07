@@ -14,7 +14,7 @@ var app = express()
 app.use(express.static('public'))
 
 app.set('views', path.resolve(__dirname, '../assets/templates'))
-app.set('view engine', 'jade')
+app.set('view engine', 'pug')
 
 if (env == 'production') {
   var cache = new CacheControl().middleware
