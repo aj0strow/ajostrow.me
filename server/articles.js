@@ -14,6 +14,7 @@ var bluebird = require('bluebird')
 var markdown = require('./markdown')
 var json = require('../db/articles.json')
 
+var env = process.env['NODE_ENV']
 var __collection = lodash.sortByOrder(json, 'posted', 'desc')
 var __index = lodash.indexBy(json, 'slug')
 var __cache = new LruCache(100)
@@ -45,9 +46,11 @@ exports.findAndRender = function (slug) {
 }
 
 exports.render = function (slug) {
-  var html = __cache.get(slug)
-  if (html) {
-    return bluebird.resolve(html)
+  if (env === 'production') {
+    var html = __cache.get(slug)
+    if (html) {
+      return bluebird.resolve(html)
+    }
   }
   var pathname = path.resolve(__dirname, '../db/articles', slug) + '.md'
   return markdown.renderFile(pathname).tap(function (html) {

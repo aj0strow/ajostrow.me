@@ -888,5 +888,12 @@
     "slug": "run-script-overnight",
     "tags": ["tmux","ubuntu"],
     "posted": 1597904380105
+  },
+  {
+    "title": "Never Clone Deep",
+    "blurb": "always clone shallow in React apps",
+    "slug": "never-clone-deep",
+    "tags": ["lodash", "react"],
+    "posted": 1599515044799
   }
 ]
