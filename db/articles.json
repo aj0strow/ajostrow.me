@@ -895,5 +895,12 @@
     "slug": "never-clone-deep",
     "tags": ["lodash", "react"],
     "posted": 1599515044799
+  },
+  {
+    "title": "Try It Both Ways",
+    "blurb": "how to make software decisions",
+    "slug": "try-it-both-ways",
+    "tags": [],
+    "posted": 1605514173124
   }
 ]

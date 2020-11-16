@@ -1,0 +1,5 @@
+In work, and in life, there are times when you need to decide between two or more alternatives. Most decisions have switching costs or other consequences, so it's ingrained in our behavior to "measure twice, cut once". We spend a lot of time researching, envisioning, and agonizing to avoid mistakes.
+
+For technical decisions, this instinct is less helpful. I'm thinking about a software company signing a new enterprise deal that comes with new product requirements. It feels right to schedule a series of cross functional meetings to research, envision, and agonize. Gather all the context, every person, every idea, to make a final decision. The problem is that it doesn't work.
+
+Software in production is complex. It's really hard to discuss user interface changes without looking at mock designs. It's really hard to discuss tradeoffs with internal tools without testing on sample data. At least for software, it's usually faster to try it both ways, and then compare. Spend more time tinkering and less time talking.
