@@ -1,10 +1,10 @@
-In React apps, keeping track of state for async requests can require a lot of boilerplate code. At work [Tejus](https://github.com/vijedi) showed me a library `react-query` that reduces this biolerplate with query and mutation hooks. 
+In React apps, keeping track of state for async requests can require a lot of boilerplate code. At work [Tejus](https://github.com/vijedi) showed me a library `react-query` that reduces this boilerplate with query and mutation hooks. 
 
 It did not immediately click. I thought `react-query` was only for fetching immutable data which is not very helpful. It turns there are multiple hooks that when used together provide a complete solution for fetching and modifying data. 
 
 > In most applications there is a helper method that wraps the Fetch API to make HTTP requests with auth, convert errors, and return JSON data. In this article the example code will assume this helper method is called `apiFetch`. 
 
-### Fetching Data Biolerplate
+### Fetching Data Boilerplate
 
 The default way to fetch data in React is with state and effect hooks. 
 
