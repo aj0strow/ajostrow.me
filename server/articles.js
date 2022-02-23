@@ -38,7 +38,9 @@ exports.find = function (slug) {
 exports.findAndRender = function (slug) {
   var article = exports.find(slug)
   if (!article) {
-    return Promise.reject(new Error('not found'))
+    const e = new Error('not found');
+    e.status = 404;
+    return Promise.reject(e);
   }
   return exports.render(slug).then(function (html) {
     return lodash.extend({ html: html }, article)
