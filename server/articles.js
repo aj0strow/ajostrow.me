@@ -15,8 +15,8 @@ var markdown = require('./markdown')
 var json = require('../db/articles.json')
 
 var env = process.env['NODE_ENV']
-var __collection = lodash.sortByOrder(json, 'posted', 'desc')
-var __index = lodash.indexBy(json, 'slug')
+var __collection = lodash.orderBy(json, 'posted', 'desc')
+var __index = lodash.keyBy(json, 'slug')
 var __cache = new LruCache(100)
 
 exports.first = function () {
@@ -38,12 +38,12 @@ exports.find = function (slug) {
 exports.findAndRender = function (slug) {
   var article = exports.find(slug)
   if (!article) {
-    const e = new Error('not found');
-    e.status = 404;
-    return Promise.reject(e);
+    const e = new Error('not found')
+    e.status = 404
+    return Promise.reject(e)
   }
   return exports.render(slug).then(function (html) {
-    return lodash.extend({ html: html }, article)
+    return lodash.assign({ html: html }, article)
   })
 }
 
