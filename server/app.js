@@ -1,15 +1,15 @@
-var env = process.env['NODE_ENV']
+const env = process.env['NODE_ENV']
 
-var express = require('express')
-var path = require('path')
-var CacheControl = require('express-cache-control')
-var moment = require('moment')
+const express = require('express')
+const path = require('path')
+const CacheControl = require('express-cache-control')
+const moment = require('moment')
 
-var sitemap = require('./sitemap')
-var assets = require('./assets')
-var Articles = require('./articles')
+const sitemap = require('./sitemap')
+const assets = require('./assets')
+const Articles = require('./articles')
 
-var app = express()
+const app = express()
 
 app.use(express.static('public'))
 
@@ -17,7 +17,7 @@ app.set('views', path.resolve(__dirname, '../assets/templates'))
 app.set('view engine', 'pug')
 
 if (env == 'production') {
-  var cache = new CacheControl().middleware
+  const cache = new CacheControl().middleware
   app.use('/assets', cache('hours', 3))
 }
 
@@ -34,7 +34,7 @@ app.get('/sitemap.xml', function (req, res) {
 })
 
 app.use(function (req, res, next) {
-  var regex = /^\/thoughts/
+  const regex = /^\/thoughts/
   if (regex.test(req.path)) {
     res.redirect(req.path.replace(regex, '/articles'))
   } else {
@@ -67,10 +67,10 @@ app.get('/thanks', function (req, res) {
 })
 
 app.get('/articles', function (req, res) {
-  var perPage = 30
-  var pageNumber = parseInt(req.query.page, 10) || 0
-  var index = pageNumber * perPage
-  var count = Articles.count()
+  const perPage = 30
+  const pageNumber = parseInt(req.query.page, 10) || 0
+  const index = pageNumber * perPage
+  const count = Articles.count()
   res.render('articles/index', {
     title: 'AJ Ostrow ~ Articles',
     breadcrumbs: [{ path: '/articles', title: 'Articles' }],

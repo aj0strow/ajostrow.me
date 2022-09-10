@@ -1,7 +1,7 @@
-var createSitemap = require('sitemap').createSitemap
-var articles = require('../db/articles.json')
+const createSitemap = require('sitemap').createSitemap
+const articles = require('../db/articles.json')
 
-var sitemap = createSitemap({
+const sitemap = createSitemap({
   hostname: 'http://www.ajostrow.me',
   cacheTime: 600000,
   urls: [

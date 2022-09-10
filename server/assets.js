@@ -1,9 +1,9 @@
-var mincer = require('mincer')
-var environment = new (mincer.Environment)
+const mincer = require('mincer')
+const environment = new (mincer.Environment)
 
 environment.appendPath('node_modules')
 
-var dirs = [
+const dirs = [
   'fonts',
   'images',
   'scripts',

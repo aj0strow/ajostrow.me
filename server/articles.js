@@ -6,18 +6,18 @@
 // title (string)
 // blurb (string)
 
-var lodash = require('lodash')
-var path = require('path')
-var LruCache = require('lru-cache')
-var bluebird = require('bluebird')
+const lodash = require('lodash')
+const path = require('path')
+const LruCache = require('lru-cache')
+const bluebird = require('bluebird')
 
-var markdown = require('./markdown')
-var json = require('../db/articles.json')
+const markdown = require('./markdown')
+const json = require('../db/articles.json')
 
-var env = process.env['NODE_ENV']
-var __collection = lodash.orderBy(json, 'posted', 'desc')
-var __index = lodash.keyBy(json, 'slug')
-var __cache = new LruCache(100)
+const env = process.env['NODE_ENV']
+const __collection = lodash.orderBy(json, 'posted', 'desc')
+const __index = lodash.keyBy(json, 'slug')
+const __cache = new LruCache(100)
 
 exports.first = function () {
   return __collection[0]
@@ -36,7 +36,7 @@ exports.find = function (slug) {
 }
 
 exports.findAndRender = function (slug) {
-  var article = exports.find(slug)
+  const article = exports.find(slug)
   if (!article) {
     const e = new Error('not found')
     e.status = 404
@@ -49,12 +49,12 @@ exports.findAndRender = function (slug) {
 
 exports.render = function (slug) {
   if (env === 'production') {
-    var html = __cache.get(slug)
+    const html = __cache.get(slug)
     if (html) {
       return bluebird.resolve(html)
     }
   }
-  var pathname = path.resolve(__dirname, '../db/articles', slug) + '.md'
+  const pathname = path.resolve(__dirname, '../db/articles', slug) + '.md'
   return markdown.renderFile(pathname).tap(function (html) {
     __cache.set(slug, html)
   })

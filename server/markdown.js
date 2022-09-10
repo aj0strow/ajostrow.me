@@ -1,19 +1,19 @@
-var bluebird = require('bluebird')
-var fs = bluebird.promisifyAll(require('fs'))
-var marked = bluebird.promisifyAll(require('marked'))
-var hljs = require('highlight.js')
+const bluebird = require('bluebird')
+const fs = bluebird.promisifyAll(require('fs'))
+const marked = bluebird.promisifyAll(require('marked'))
+const hljs = require('highlight.js')
 
 // auto include heading ids
 
-var renderer = new marked.Renderer()
+const renderer = new marked.Renderer()
 
 function quote (s) {
   return '"' + s + '"'
 }
 
 renderer.heading = function (text, level) {
-  var tag = "h" + level
-  var anchor = text.toLowerCase().replace(/[^\w]+/g, '-')
+  const tag = "h" + level
+  const anchor = text.toLowerCase().replace(/[^\w]+/g, '-')
   return "<" + tag + " id=" + quote(anchor) + ">" + text + "</" + tag + ">"
 }
 
