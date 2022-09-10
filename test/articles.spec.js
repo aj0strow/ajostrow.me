@@ -1,4 +1,4 @@
-var Articles = req('articles')
+var Articles = require('../server/articles')
 var assert = require('assert')
 
 describe('articles', function () {

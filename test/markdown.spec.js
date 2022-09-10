@@ -1,4 +1,4 @@
-var markdown = req('markdown')
+var markdown = require('../server/markdown')
 var assert = require('assert')
 
 describe('markdown', function () {
