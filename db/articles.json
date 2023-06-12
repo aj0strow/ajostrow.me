@@ -923,5 +923,12 @@
     "slug": "making-tests-fast",
     "tags": ["ci"],
     "posted": 1656721512264
+  },
+  {
+    "title": "Lead by Asking Questions",
+    "blurb": "how to be an effective leader for engineering teams",
+    "slug": "lead-by-asking-questions",
+    "tags": ["management"],
+    "posted": 1684222098000
   }
 ]
