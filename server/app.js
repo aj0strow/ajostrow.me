@@ -97,7 +97,7 @@ app.get('/articles/:slug', function (req, res, next) {
       if (e.status === 404) {
         res.status(404).render('articles/not_found', {
           title: 'AJ Ostrow ~ Not Found',
-        });
+        })
       } else {
         next(e)
       }
