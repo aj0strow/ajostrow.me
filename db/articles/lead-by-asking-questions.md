@@ -26,11 +26,11 @@ Did that work? Will you change your management style? Probably not.
 
 Now I will _ask questions_.
 
-> Have you ever been wrong? When you were, did you decide alone or as a group?
+> Have you ever been wrong? Were you wrong as a group or alone?
 >
-> Has there been a time when you had an idea that you didn't share? How come? Maybe you weren't 100% confident, or maybe it felt outside your domain, or maybe the leader already wanted something else? If someone had asked, would you have shared?
+> Has there been a time when you had an idea that you didn't share? How come? Maybe you weren't 100% confident, or it felt outside your domain, or the leader already wanted something else. If someone had asked, would you have shared?
 >
-> Has there been a time when someone didn't understand you fully? How long did it take to realize you weren't on the same page?
+> Has there been a time when someone didn't understand you fully? How long did it take you to realize they weren't on the same page?
 >
 > Has there been a time when someone told you exactly what to do? How did that make you feel? Did you appreciate the instructions or did you feel like you were being micromanaged?
 >
