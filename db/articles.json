@@ -930,5 +930,12 @@
     "slug": "lead-by-asking-questions",
     "tags": ["management"],
     "posted": 1684222098000
+  },
+  {
+    "title": "Refresh for Same Site Cookie",
+    "blurb": "how to secure the auth cookie but also make it work for external links",
+    "slug": "refresh-for-same-site-cookie",
+    "tags": ["http", "html", "security"],
+    "posted": 1688251654000
   }
 ]
