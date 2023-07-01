@@ -12,7 +12,7 @@ Most frameworks provide high level abstractions for cookies. How it actually wor
 
 How it used to work is browsers would send all of the cookies in a `Cookie` header to all of the sites. You can imagine that would be super insecure if one of the cookies is `accesstoken` for the site `bank.com` and another site `game.net` can see the cookie too. In order to send the right cookies to the right servers there are [attributes for cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#attributes).
 
-### Same Site
+### Same Site Attribute
 
 One of the attributes is `SameSite` which controls whether the browser will send the cookie in requests to servers hosted on a different domain. For example if you set the cookie on `bank.com` and make a request to `game.net` it would be considered a cross site request.
 
