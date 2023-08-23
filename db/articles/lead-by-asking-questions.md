@@ -2,9 +2,9 @@ At my going away party at my last job, a few of my (now former) coworkers asked 
 
 ### Danish Parenting
 
-When I became a manager, I read a lot of books. The ones that you would expect. It formed a baseline, but the canon of software management is missing a few important ideas.
+When I became a manager, I read a lot of books. It formed a baseline, but the canon of software management is missing a few important ideas. I found many of those ideas in an unlikely place.
 
-I found many of those ideas in an unlikely place. I highly recommend that managers read [The Danish Way of Parenting](https://thedanishway.com/). While the subject of the book is parenting, the pages are full of tips on communicating, building trust, goal setting, reframing, course-correcting, bonding as a group, mentoring, and so on.
+I highly recommend that managers read [The Danish Way of Parenting](https://thedanishway.com/). While the subject of the book is parenting, the pages are full of tips on communicating, building trust, goal setting, reframing, course-correcting, bonding as a group, mentoring, and so on.
 
 There is one other idea that I did not see discussed in parenting books or otherwise. The default sentence form of a leader should be question form.
 
