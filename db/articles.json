@@ -937,5 +937,12 @@
     "slug": "refresh-for-same-site-cookie",
     "tags": ["http", "html", "security"],
     "posted": 1688251654000
+  },
+  {
+    "title": "Get JSON from GPT",
+    "blurb": "how to get predictable JSON output using the OpenAI API",
+    "slug": "get-json-from-gpt",
+    "tags": ["python", "pydantic", "gpt-4"],
+    "posted": 1692784308000
   }
 ]
