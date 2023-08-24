@@ -2,7 +2,7 @@ There are a lot of language model programs that rely on structured outputs. The 
 
 ### Function Call Arguments
 
-In the chat completion params, describe the JSON structure that you want. Include the setting to require the model to call the function. In my own usage, I also include a sentence in the prompt about calling the function.
+In the chat completion params, describe the JSON structure that you want. Include the setting to require the model to call the function. I also include a sentence in the prompt about calling the function.
 
 ```python
 response = openai.ChatCompletion.create(
