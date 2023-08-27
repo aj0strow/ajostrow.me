@@ -11,7 +11,7 @@
     "less": "3.8.1",
     "lodash": "4.17.21",
     "lru-cache": "6.0.0",
-    "marked": "0.6.0",
+    "marked": "1.0.0",
     "mincer": "2.0.1",
     "moment": "2.22.2",
     "pug": "3.0.0",
@@ -19,6 +19,7 @@
     "smartquotes": "2.3.1"
   },
   "devDependencies": {
+    "diff": "5.1.0",
     "mocha": "10.0.0"
   },
   "scripts": {
