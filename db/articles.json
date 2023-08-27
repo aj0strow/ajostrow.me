@@ -1,12 +1,5 @@
 [
   {
-    "title": "Constructor From Any Object",
-    "blurb": "hack to get the actual class from any javascript variable.",
-    "slug": "constructor-from-any-object",
-    "tags": ["javascript"],
-    "posted": 1370750792565
-  },
-  {
     "title": "Rails Facebook Auth",
     "blurb": "how to get OmniAuth, Facebook, Rails 3, Heroku and GoDaddy working together.",
     "slug": "rails-facebook-auth",
