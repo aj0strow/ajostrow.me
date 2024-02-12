@@ -937,5 +937,12 @@
     "slug": "get-json-from-gpt",
     "tags": ["python", "pydantic", "gpt-4"],
     "posted": 1692784308000
+  },
+  {
+    "title": "Zanzibar Style Auth",
+    "blurb": "scalable auth framework for new projects",
+    "slug": "zanzibar-style-auth",
+    "tags": ["postgres", "security", "auth"],
+    "posted": 1707730311044
   }
 ]
