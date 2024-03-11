@@ -10,6 +10,7 @@ html(lang="en")
     link(rel="icon" href="/favicon.png" type="image/png")    
     meta(name="description" content="Personal blog, programming articles, projects.")
     script(defer src=digest('boot.js'))
+    script(async src="https://www.googletagmanager.com/gtag/js?id=G-V6XRV2N4EL")
   body
     .container-fluid
       .row
@@ -49,11 +50,7 @@ html(lang="en")
           .layout
             block page
     script.
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-45264033-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V6XRV2N4EL');
