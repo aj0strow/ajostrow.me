@@ -792,7 +792,7 @@
     "posted": 1494525429550
   },
   {
-    "title": "The Zen Of Cmp",
+    "title": "The Zen of Cmp",
     "blurb": "custom numeric comparisons using the cmp operator",
     "slug": "the-zen-of-cmp",
     "tags": ["golang"],
@@ -944,5 +944,12 @@
     "slug": "zanzibar-style-auth",
     "tags": ["postgres", "security", "auth"],
     "posted": 1707730311044
+  },
+  {
+    "title": "The Trifecta of Appreciation",
+    "blurb": "the most important thing for tech leaders",
+    "slug": "the-trifecta-of-appreciation",
+    "tags": ["management"],
+    "posted": 1720388039111
   }
 ]
