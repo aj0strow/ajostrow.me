@@ -3,7 +3,7 @@
   "name": "ajostrow.me",
   "dependencies": {
     "bluebird": "3.5.2",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "express": "4.16.3",
     "express-cache-control": "1.0.2",
     "highlight.js": "9.12.0",
