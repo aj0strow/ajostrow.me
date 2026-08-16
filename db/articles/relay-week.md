@@ -1,58 +1,84 @@
-AI is accelerating, public companies are doing layoffs, and many AI startups are asking employees to work 6 days a week. I hold out hope the productivity of AI will manifest into material wealth and leasure time. There is plenty of evidence for AI creating wealth so I will focus on leisure time. 
+AI is accelerating but the impact on labor is uneven. Large companies are doing layoffs while some of the fastest growing startups are asking employees to work 6 days a week in-office. The expectation so far is fewer jobs and longer hours.
+
+I remain hopeful the long-term outcome will be a better life for everyone. There is growing evidence that AI can accelerate research, reduce costs, and increase productivity. The relay week is a proposal for organizing work around AI while converting some of the gains into more leisure time for employees.
 
 ### Textile Mills
 
-There is historic precedence for extreme work schedules during a time of automation. In the north of England starting in 1771 a cotton mill in Derbyshire is credited as the first modern factory. The productivity and cost of water and steam equipment gave an advantage to mills that operated for more hours. The employees worked 12 to 14 hour days, 6 days a week, taking Sunday off. The work culture went on that way for multiple generations. 
+There is historical precedent for extreme work schedules during a time of automation. In the north of England starting in 1771 a cotton mill in Derbyshire is credited as the first modern factory. The productivity and cost of equipment gave an advantage to mills that operated for more hours. The employees worked 12 to 14 hours per day, 6 days a week. The work culture went on that way for multiple generations.
 
 ### Full Time
 
 The concept of full time work is relatively new. In the preindustrial era laborers worked in the seasonal daylight hours and artisans fulfilled orders. The factory model of the industrial revolution was the start of time based shifts. Reform started in England with the Ten Hours Act in 1847 to limit the hours of women and teenagers.
 
-Robert Owen in Scottland came up with the idea for an 8-hour work day. His proposal was "eight hours labour, eight hours recreation, eight hours rest" in the 1810s. I don't have a catchy tagline yet for the relay week. The idea was picked up by unions in the U.S. in the 1860s and 8-hour days became the standard for federal employees. 
+Robert Owen in Scotland came up with the idea for an 8-hour work day. His proposal was "eight hours labour, eight hours recreation, eight hours rest" in the 1810s. I have yet to come up with a slogan for the relay week. The idea was picked up by unions in the United States in the 1860s and 8-hour days became the standard for federal employees.
 
-The next wave of reform came in the 1920s when the Ford Motor Company adopted a 5-day schedule. The rationale was interesting. Henry Ford wanted to give factory workers more rest and leisure time. He belived it would reduce mistakes on the assembly line, help with retention, and boost consumer spending on Saturdays. It seems reasonable that more leisure time would lead to more consumption today as well. 
+The next wave of reform came in the 1920s when the Ford Motor Company adopted a 5-day schedule. The rationale was interesting. Henry Ford wanted to give factory workers more rest and leisure time. He believed it would reduce mistakes on the assembly line, help with retention, and boost consumer spending on Saturdays. It seems reasonable that more leisure time would lead to more consumption today as well.
 
-The New Deal under Roosevelt included the Fair Labor Standards Act of 1938 which introduced the minimum wage and overtime pay. It started at 44 hours per week and reduced to 40 hours. The legislation does not apply to executives, administrators, and professionals. 
+The New Deal under Roosevelt included the Fair Labor Standards Act of 1938 which introduced the minimum wage and overtime pay. It started at 44 hours per week and reduced to 40 hours. The law established exemptions for executive, administrative, and professional employees.
 
-Full time employment offered today is nonexempt with predictable 40-hour weeks, or exempt with unpredictable 40-plus hour weeks. It has been that way for over 85 years. 
+Full time employment offered today is nonexempt with predictable 40-hour weeks, or exempt with unpredictable 40-plus hour weeks. It has been that way for more than 85 years.
 
-### Steering Committee
+### Agentic Work
 
-In the last year software engineering has evolved from editing files to generating patches. Most people agree the same level of automation is coming soon for more occupations. Individual contributors are shifting from doing work to supervising machine processes. 
+In the last year software engineering has evolved from editing files to generating patches. A similar level of automation is arriving soon for more occupations. Individual contributors are shifting from doing work to supervising machine processes.
 
-The transition from doing to supervising changes the individual scope. Instead of focusing on execution for a single project, employees can supervise multiple projects. An overlooked aspect in predictions on the ‘future of work’ is that right now in the ‘present of work’ high-level work is collective, not individual. Strategic planning, research peer review, user interface design critiques, software architecture design reviews, venture investment partner votes. 
+The transition from doing to supervising changes the scope of work. Instead of focusing on execution for a single project, employees can supervise multiple projects. The next level of automation is designing the environment in which the machine processes operate, starting processes, reviewing and approving milestones, and intervening if necessary.
 
-It follows that if machines do the work, employees do high level work, team structure will adapt from directors, managers, and individual contributors into small groups of high taste reviewers and decision makers. Instead of an operating department you have a steering committee. The group designs the environment in which the machine processes operate, starting new processes, reviewing and approving milestones, and intervening if necessary. 
+An example today of machines doing work and escalating to humans is the software on-call rotation. Mature teams have set up monitoring and alerting so that if a service breaks or degrades the on-call engineer is paged to triage and fix. It could be that project work in the future looks like on-call at low severity and low urgency.
 
 ### Project Affinity
 
-In the soon-to-be past of software engineering context was king. The ramp to become productive on a project for low level work was expensive. Managers went to great lengths to maintain stable project assignments to avoid thrash. The risk of duplicate ramp effort and errors made handing off projects a last resort. 
+In the soon-to-be past of software engineering context was king. The ramp to become productive on a project was expensive. Managers went to great lengths to avoid thrash. The delay of ramping up again and risk of errors made handing off projects a last resort.
 
-In the soon-to-be future of software engineering the cost of handing off projects will be less dramatic. The agent harness will have access to meeting notes, past decisions, project deadlines, the current state of work. The employees will be regularly context switching to make progress on many projects at once. It might be ok to reassign a project to the most relevant and available steering committee at different stages. It might be disorienting to jump into and out of projects, but perhaps not any more so than the baseline of supervising lots of projects. 
+In the soon-to-be future of software engineering the cost of handing off projects will be less dramatic. The agent will have access to meeting notes, project deadlines, past and present work. It will be disorienting to jump into a new project but employees will already be context switching across multiple projects.
 
-The other benefit of single assigment is accountability. The responsibility to drive a project forward and complete the project is unambiguous if there is a single owner. The simplicity was valuable in the era of artisinal knowledge work. In the coming AI era my expectation is performance attribution will be far more granular than project assignment. 
+Side note: The other benefit of single assignment was accountability. The responsibility to drive a project forward was unambiguous with a single owner. The simplicity was valuable in the era of artisanal knowledge work. In the coming AI era performance attribution will need to adapt. The agent does the heavy lifting and employees score impact based on unique value not project completion.
+
+### High-Level Work
+
+There is a limit to how much high-level work can be done at a given time. Products, organizations, and customers can only absorb so much change. AI will continue to do work faster and better. The pace of planning however will have a natural ceiling.
+
+High-level work also takes less time than execution. A few hours of planning each day may be enough. The rest of the job becomes reviewing progress and being available when a new decision is needed.
+
+### Steering Committees
+
+An overlooked aspect in predictions on the ‘future of work’ is that currently in the ‘present of work’ high-level work is collective, not individual. Strategic planning, research peer review, interface design critiques, software architecture reviews, investment partner votes.
+
+It follows that if machines do the work, employees do high level work, team structure will adapt from directors, managers, and individual contributors into small groups of high taste reviewers and decision makers. Instead of a whole department you have a steering committee.
 
 ### Opportunity Cost
 
-There is one more prerequisite topic. For most companies inference is a shared commodity unlike factory equipment. The gpus are never idle as long as work is happening somewhere in the world. There is no capacity utilization benefit to run the business more hours of the day. 
+There is one more prerequisite for the relay week. Inference is generally a shared commodity unlike factory equipment. The gpus are never idle as long as work is happening somewhere in the world. There is no capacity utilization benefit to work extra hours.
 
-There exists however the opportunity cost of missed capabilities, growth, and learning. While utilization is incremental margin for a factory the risk of slower improvement for products and services can be existential. The startups in SF working 6 days in office seem to agree the winner of their category will be running as continuously as possible. 
+The opportunity cost is progress. An agent that reaches a decision, approval, or blocker on Friday night might otherwise wait until Monday morning for a person to respond. In a competitive market delays can add up. The advantage is not getting more utilization out of the machines but keeping projects moving.
+
+The startups in SF working 6 days in office seem to agree. If the category winner is determined in part by velocity, companies have the incentive to operate as continuously as possible. The question is whether that requires the same employees to work more days or whether the work can be handed off.
 
 ### Relay Week
 
-The goal of the relay week is to solve for competing interests in the AI era. The company benefits from continuous productivity. The employees need sleep and generally want more paid time off. The status quo today is projects make forward progress 40 to 60 hours per week and employees get weekends and evenings. 
+The relay week is a proposal for updated labor norms if departments become steering committees and project execution starts to look like on-call. It derives from a prediction that employees will spend more time planning and reacting but rarely need to 'lock in' for long stretches to complete tasks.
 
-The core idea of the relay week is to hand off projects for 24/7 progress. The exact schedules and shifts can be arranged in multiple ways. 
+The relay week tries to solve age-old competing interests for an upcoming AI era. Companies benefit from continuous progress. Employees need to rest and generally want more paid time off. The status quo is that projects make forward progress 40 to 60 hours per week and employees get weekends and evenings. The relay week instead divides responsibility across multiple teams so projects can make progress 24/7 while each employee works roughly half the week.
 
-The first opportunity is an overnight relay. The company can set up an office in a complimentary time zone. The employees can work a regular week and projects make forward progress for 80 to 120 hours. There are operational challenges to collaborating across the world but given the need for sleep there is no better way to get continuous progress. 
+There is also an employment benefit to replicating teams. If AI turns a department of people into a small steering committee, a company can hire multiple copies of that committee to cover different parts of the week. The company gets a large productivity gain from AI and competitive advantage from 24/7 progress while converting some of the savings into more jobs, more coverage, and more time off.
 
-The second opportunity is a midweek relay. If there are two locations and each location operates 12 hours per day and through the weekend the result is uninterrupted progress. The problem is very few people are capable of working that hard and even fewer are inclined to do so. The solution can be another handoff. If projects make progress across teams overnight there's no reason projects can't make progress across teams midweek. 
+There are many possibilities for dividing a 24-hour day and 7-day week. Most companies that need to work overnight set up 'follow the sun' coverage with offices in multiple time zones. The handoff from day to night is common in many industries. The more interesting handoff for the relay week is midweek.
 
-In a fully scaled relay there are 4 teams, 2 per location. For example teams A and B in Toronto, teams C and D in Singapore. The schedule would be: A to C back and forth for 3 days on 12-hour shifts, then midweek A to B and C to D for 6-hour shifts, then B to D back and forth for 3 days on 12-hour shifts, then B to A and D to C to start the next week. 
+If the goal is continuous progress to keep the agents running, the weekend becomes a problem. At the same time very few people are capable of working every day and even fewer are inclined to do so. The solution is a midweek handoff so that each person works for roughly half the week instead of 5/7 of the week.
 
-The schedule for employees is three long 12-hour days, one 6-hour day, and a 3-day weekend. In a hard-working industry with unintended 10-hour or 12-hour days in place of 8-hour days, a 3-day weekend might be a meaningful improvement.
+In a fully scaled relay there might be 4 teams, 2 per location. Each team is a 3-person steering committee making 12 employees for a continuously operating department. It might look like this:
 
-For employees in different stages of life it could work to reduce to 10-hour days and allow projects to stall for a couple hours or set up a 3-location relay for continuous 8-hour shifts. Another variation is alternating 3-day and 4-day weeks to avoid a half day. I assume long shifts are more productive for supervising but that is not based on actual data. 
+- Teams A1 and A2 are hired in Toronto.
+- Teams B1 and B2 are hired in Singapore.
+- Teams in Toronto hand off to teams in Singapore overnight.
+- Teams on schedule 1 cover Sunday, Monday, Tuesday for 12 hours and Wednesday for 6 hours.
+- Teams on schedule 2 cover Wednesday for 6 hours and Thursday, Friday, Saturday for 12 hours.
+- Teams on schedule 1 hand off to schedule 2 in the same location midweek. Teams on schedule 2 hand off across location to schedule 1 at the end of the week.
 
-The last time we changed the work schedule was the industrial revolution. As the AI revolution gets underway it feels like a reasonable time to pause and reflect if we might enjoy a long weekend every week. 
+High-level work is scheduled inside the shift. The target might be 2 to 4 hours of planning and decision making each day, with the remaining time spent keeping tabs and responding if something comes up. A 12-hour shift does not mean 12 hours of focused work. It is closer to a 12-hour availability window with a few hours of scheduled high-level work.
 
+The result is three 12-hour availability windows, one 6-hour half-day, and a 3-day weekend. In a hard-working industry where 8-hour days have already become unintended 12-hour days, a 3-day weekend might be a meaningful improvement.
+
+For employees in different stages of life and companies in less dire competition it works to reduce the length of shifts and allow projects to stall for a few hours, or set up a 3-location relay for continuous 8-hour shifts. Another variation is alternating 3-day and 4-day weeks to avoid a half day.
+
+The last time we changed the work schedule was around the rise of mass production. As the AI revolution gets underway it feels like a reasonable time to pause and reflect. Religion gave us one day off and the industrial age gave us two days off. Perhaps AI will give us three days off and bring a new kind of prosperity in free time as well as products and services.
