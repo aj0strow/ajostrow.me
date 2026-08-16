@@ -81,4 +81,4 @@ The result is three 12-hour availability windows, one 6-hour half-day, and a 3-d
 
 For employees in different stages of life and companies in less dire competition it works to reduce the length of shifts and allow projects to stall for a few hours, or set up a 3-location relay for continuous 8-hour shifts. Another variation is alternating 3-day and 4-day weeks to avoid a half day.
 
-The last time we changed the work schedule was around the rise of mass production. As the AI revolution gets underway it feels like a reasonable time to pause and reflect. Religion gave us one day off and the industrial age gave us two days off. Perhaps AI will give us three days off and bring a new kind of prosperity in free time as well as products and services.
+The last time we changed the work schedule was around the rise of mass production. As the AI revolution gets underway it feels like a reasonable time to pause and reflect. Religion gave us one day off and industrialization gave us two days off. Perhaps AI will give us three days off and bring a new level of prosperity in free time as well as products and services.
